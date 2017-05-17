@@ -70,6 +70,9 @@
                   <td class="who"><img src="logos/beth.png"></td><td class="date" id="beth">WHEN</td><td class="where">TBD</td>
             </tr>        
             <tr>
+                  <td class="who"><img src="logos/pc.png"></td><td class="date" id="pc">WHEN</td><td class="where">TBD</td>
+            </tr>
+            <tr>
                   <td class="who"><img src="logos/ubi.png"></td><td class="date" id="ubi">WHEN</td><td class="where">TBD</td>
             </tr>
             <tr>
@@ -85,12 +88,14 @@
     <script>
     var xboxdate = new Date('6/11/2017 2:00:00 PM PDT');
     var bethdate = new Date('6/11/2017 7:00:00 PM PDT');        
+    var pcdate = new Date('6/12/2017 10:00:00 AM PDT');                
     var ubidate = new Date('6/12/2017 1:00:00 PM PDT');        
     var psdate = new Date('6/12/2017 6:00:00 PM PDT');
     var nindate = new Date('6/13/2017 9:00:00 AM PDT');
         
     document.getElementById('xbox').innerHTML = xboxdate.toLocaleDateString() + " " + xboxdate.toLocaleTimeString();
     document.getElementById('beth').innerHTML = bethdate.toLocaleDateString() + " " + bethdate.toLocaleTimeString();
+    document.getElementById('pc').innerHTML = pcdate.toLocaleDateString() + " " + pcdate.toLocaleTimeString();        
     document.getElementById('ubi').innerHTML = ubidate.toLocaleDateString() + " " + ubidate.toLocaleTimeString();
     document.getElementById('ps').innerHTML = psdate.toLocaleDateString() + " " + psdate.toLocaleTimeString();
     document.getElementById('nin').innerHTML = nindate.toLocaleDateString() + " " + nindate.toLocaleTimeString();
