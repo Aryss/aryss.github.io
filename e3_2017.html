@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>E3 2017 Schedule</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+        
+        
+        body{
+            padding: 60px;
+            margin: 0px;            
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            font-size: 26px;            
+        }
+        
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td{
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+                
+        tr.border_bottom td {
+            border-bottom: 3px solid red;
+            font-weight: 700;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        
+        img{            
+            height: 50px;
+        }
+        .who{
+            width: 400px;
+            height: 50px;
+        }
+        .when{
+            width: 300px;
+        }
+        .where{
+            width: 300px;
+        }
+        .empty{
+            height: 0px;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+    <table>
+            <tr class="border_bottom">
+                <td class="who">WHO</td><td class="when">WHEN</td><td class="where">WHERE</td>
+            </tr>
+            <tr>
+                <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+            </tr>
+            <tr>
+                  <td class="who"><img src="logos/xbox.png"></td><td class="when" id="xbox">WHEN</td><td class="where">TBD</td>
+            </tr>
+            <tr>
+                  <td class="who"><img src="logos/beth.png"></td><td class="date" id="beth">WHEN</td><td class="where">TBD</td>
+            </tr>        
+            <tr>
+                  <td class="who"><img src="logos/ubi.png"></td><td class="date" id="ubi">WHEN</td><td class="where">TBD</td>
+            </tr>
+            <tr>
+                  <td class="who"><img src="logos/ps.png"></td><td class="date" id="ps">WHEN</td><td class="where">TBD</td>
+            </tr>        
+            <tr>
+                  <td class="who"><img src="logos/nin.png"></td><td class="date" id="nin">WHEN</td><td class="where">TBD</td>
+            </tr>        
+        
+    </table>        
+    </center>
+    
+    <script>
+    var xboxdate = new Date('6/11/2017 9:00:00 PM UTC');
+    var bethdate = new Date('6/12/2017 2:00:00 AM UTC');        
+    var ubidate = new Date('6/12/2017 8:00:00 PM UTC');        
+    var psdate = new Date('6/13/2017 1:00:00 AM UTC');
+    var nindate = new Date('6/13/2017 4:00:00 PM UTC');
+        
+    document.getElementById('xbox').innerHTML = xboxdate.toLocaleDateString() + " " + xboxdate.toLocaleTimeString();
+    document.getElementById('beth').innerHTML = bethdate.toLocaleDateString() + " " + bethdate.toLocaleTimeString();
+    document.getElementById('ubi').innerHTML = ubidate.toLocaleDateString() + " " + ubidate.toLocaleTimeString();
+    document.getElementById('ps').innerHTML = psdate.toLocaleDateString() + " " + psdate.toLocaleTimeString();
+    document.getElementById('nin').innerHTML = nindate.toLocaleDateString() + " " + nindate.toLocaleTimeString();
+        
+ // "Wed Jun 29 2011 09:52:48 GMT-0700 (PDT)"
+    
+    </script>
+    
+</body>
+</html>
