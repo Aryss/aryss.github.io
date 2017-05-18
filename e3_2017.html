@@ -9,7 +9,7 @@
         
         
         body{
-            padding: 60px;
+            padding: 40px 60px;
             margin: 0px;            
             font-family: 'Open Sans', sans-serif;
             font-weight: 500;
@@ -61,12 +61,26 @@
             font-size: 14px;
             text-transform: uppercase;
         }
-        
+        .note{
+            font-size: 14px;
+            line-height: 14px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+        }        
+        h3{
+        line-height: 20px;
+        margin-bottom: 0px;
+        padding-bottom: 8px;
+        }
+        .smaller{
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
     <center>
         <h3>E3 2017 PRESS-CONFERENCE SCHEDULE</h3>
+        <div class="note"> all times are converted to your local time zone for your convenience</div>
     <table>
             <tr class="border_bottom">
                 <td class="who">WHO</td><td class="when">WHEN</td><td class="where">WHERE</td>
@@ -127,7 +141,7 @@
     document.getElementById('nin').innerHTML = nindate.toLocaleDateString(lang, dopt) + "   " + nindate.toLocaleTimeString(lang,topt);
     </script>
  
-    <div class="lastupd">Last updated on May 18: added PC Game show time</div>    </center>
+        <div class="lastupd">Last updated on May 18: added PC Game show time<br><span class="smaller">written by Michael "_Lynx" Sokolkov</span></div>    </center>
     
 </body>
 </html>
