@@ -21,6 +21,19 @@
             text-align: center;
         }
         
+        a.yt {
+            color: red;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        a.tw {
+            color: #4B367C;
+            position: relative;
+            margin-left: 5px;
+            margin-right: 5px;
+            top: 3px;
+        }        
+        
         td{
             padding-bottom: 20px;
             padding-top: 20px;
@@ -89,22 +102,27 @@
                 <td class="empty"></td><td class="empty"></td><td class="empty"></td>
             </tr>
             <tr class="content">
-                  <td class="who"><img src="logos/ea.png"></td><td class="when" id="ea">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/ea.png"></td><td class="when" id="ea">WHEN</td><td class="where"> <a class="tw" href="https://www.twitch.tv/ea" title="EA Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a> </td>
             </tr>        
             <tr class="content">
-                  <td class="who"><img src="logos/xbox.png"></td><td class="when" id="xbox">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/xbox.png"></td><td class="when" id="xbox">WHEN</td><td class="where">
+                <a class="yt" href="http://www.youtube.com/xbox" title="Xbox YouTube channel"><i  class="fa fa-youtube-play fa-2x"></i></a>
+                <a class="tw" href="http://www.twitch.tv/xbox" title="Xbox Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a> 
+                </td>
             </tr>
             <tr class="content">
-                  <td class="who"><img src="logos/beth.png"></td><td class="date" id="beth">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/beth.png"></td><td class="date" id="beth">WHEN</td><td class="where"> <a class="tw" href="https://www.twitch.tv/bethesda" title="Bethesda's Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a> </td></td>
             </tr>        
             <tr class="content">
-                  <td class="who"><img src="logos/pc.png" style="height: 50px !important;"></td><td class="date" id="pc">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/pc.png" style="height: 50px !important;"></td><td class="date" id="pc">WHEN</td><td class="where"><a class="tw" href="https://www.twitch.tv/pcgamer" title="PC Gamer's Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a> </td>                
             </tr>
             <tr class="content">
-                  <td class="who"><img src="logos/ubi.png" style="height: 50px !important;"></td><td class="date" id="ubi">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/ubi.png" style="height: 50px !important;"></td><td class="date" id="ubi">WHEN</td><td class="where"><a class="tw" href="https://www.twitch.tv/ubisoft" title="Ubisoft Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a></td>
+                
             </tr>
             <tr class="content">
-                  <td class="who"><img src="logos/ps.png"></td><td class="date" id="ps">WHEN</td><td class="where">TBD</td>
+                  <td class="who"><img src="logos/ps.png"></td><td class="date" id="ps">WHEN</td><td class="where"><a class="tw" href="https://www.twitch.tv/playstation" title="Playstation Twitch channel"><i  class="fa fa-twitch fa-2x"></i></a></td>
+                
             </tr>        
             <tr>
                   <td class="who"><img src="logos/nin.png"></td><td class="date" id="nin">WHEN</td><td class="where">TBD</td>
@@ -141,7 +159,7 @@
     document.getElementById('nin').innerHTML = nindate.toLocaleDateString(lang, dopt) + "   " + nindate.toLocaleTimeString(lang,topt);
     </script>
  
-        <div class="lastupd">Last updated on May 18: added PC Game show time<br><span class="smaller">written by Michael "_Lynx" Sokolkov</span></div>    </center>
+        <div class="lastupd">Last updated on May 18: added stream links<br><span class="smaller">written by Michael "_Lynx" Sokolkov</span></div>    </center>
     
 </body>
 </html>
