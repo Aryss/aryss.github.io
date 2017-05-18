@@ -13,7 +13,7 @@
             margin: 0px;            
             font-family: 'Open Sans', sans-serif;
             font-weight: 500;
-            font-size: 26px;            
+            font-size: 20px;            
         }
         
         table{
@@ -31,17 +31,22 @@
             font-weight: 700;
             padding-top: 0px;
             padding-bottom: 0px;
+            font-size: 26px;
+        }
+        
+        tr.content td {
+            border-bottom: 1px solid #E0E0E0;
         }
         
         img{            
-            height: 50px;
+            height: 40px;
         }
         .who{
             width: 400px;
             height: 50px;
         }
         .when{
-            width: 300px;
+            width: 320px;
         }
         .where{
             width: 300px;
@@ -51,11 +56,17 @@
             padding: 10px;
         }
         
+        .lastupd{
+            padding-top: 40px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
     </style>
 </head>
 <body>
     <center>
-        <h3>E3 2017 SCHEDULE</h3>
+        <h3>E3 2017 PRESS-CONFERENCE SCHEDULE</h3>
     <table>
             <tr class="border_bottom">
                 <td class="who">WHO</td><td class="when">WHEN</td><td class="where">WHERE</td>
@@ -63,19 +74,22 @@
             <tr>
                 <td class="empty"></td><td class="empty"></td><td class="empty"></td>
             </tr>
-            <tr>
+            <tr class="content">
+                  <td class="who"><img src="logos/ea.png"></td><td class="when" id="ea">WHEN</td><td class="where">TBD</td>
+            </tr>        
+            <tr class="content">
                   <td class="who"><img src="logos/xbox.png"></td><td class="when" id="xbox">WHEN</td><td class="where">TBD</td>
             </tr>
-            <tr>
+            <tr class="content">
                   <td class="who"><img src="logos/beth.png"></td><td class="date" id="beth">WHEN</td><td class="where">TBD</td>
             </tr>        
-            <tr>
+            <tr class="content">
                   <td class="who"><img src="logos/pc.png"></td><td class="date" id="pc">WHEN</td><td class="where">TBD</td>
             </tr>
-            <tr>
+            <tr class="content">
                   <td class="who"><img src="logos/ubi.png"></td><td class="date" id="ubi">WHEN</td><td class="where">TBD</td>
             </tr>
-            <tr>
+            <tr class="content">
                   <td class="who"><img src="logos/ps.png"></td><td class="date" id="ps">WHEN</td><td class="where">TBD</td>
             </tr>        
             <tr>
@@ -83,26 +97,37 @@
             </tr>        
         
     </table>        
-    </center>
+
     
     <script>
+    
+    var dopt =  { weekday: 'long', month: 'long', day: 'numeric' };
+    var topt = { hour: `2-digit`, minute: `2-digit` };
+    var lang;
+            if (window.navigator.languages) {
+                lang = window.navigator.languages[0];
+            } else {
+                lang = window.navigator.userLanguage || window.navigator.language;
+            }        
+        
+    var eadate = new Date('6/10/2017 12:00:00 PM PDT');        
     var xboxdate = new Date('6/11/2017 2:00:00 PM PDT');
     var bethdate = new Date('6/11/2017 7:00:00 PM PDT');        
     var pcdate = new Date('6/12/2017 10:00:00 AM PDT');                
     var ubidate = new Date('6/12/2017 1:00:00 PM PDT');        
     var psdate = new Date('6/12/2017 6:00:00 PM PDT');
     var nindate = new Date('6/13/2017 9:00:00 AM PDT');
-        
-    document.getElementById('xbox').innerHTML = xboxdate.toLocaleDateString() + " " + xboxdate.toLocaleTimeString();
-    document.getElementById('beth').innerHTML = bethdate.toLocaleDateString() + " " + bethdate.toLocaleTimeString();
-    document.getElementById('pc').innerHTML = pcdate.toLocaleDateString() + " " + pcdate.toLocaleTimeString();        
-    document.getElementById('ubi').innerHTML = ubidate.toLocaleDateString() + " " + ubidate.toLocaleTimeString();
-    document.getElementById('ps').innerHTML = psdate.toLocaleDateString() + " " + psdate.toLocaleTimeString();
-    document.getElementById('nin').innerHTML = nindate.toLocaleDateString() + " " + nindate.toLocaleTimeString();
-        
- // "Wed Jun 29 2011 09:52:48 GMT-0700 (PDT)"
-    
+
+    document.getElementById('ea').innerHTML = eadate.toLocaleDateString(lang, dopt) + "   " + eadate.toLocaleTimeString(lang,topt);        
+    document.getElementById('xbox').innerHTML = xboxdate.toLocaleDateString(lang, dopt) + "   " + xboxdate.toLocaleTimeString(lang,topt);
+    document.getElementById('beth').innerHTML = bethdate.toLocaleDateString(lang, dopt) + "   " + bethdate.toLocaleTimeString(lang,topt);
+    document.getElementById('pc').innerHTML = pcdate.toLocaleDateString(lang, dopt) + "   " + pcdate.toLocaleTimeString(lang,topt);        
+    document.getElementById('ubi').innerHTML = ubidate.toLocaleDateString(lang, dopt) + "   " + ubidate.toLocaleTimeString(lang,topt);
+    document.getElementById('ps').innerHTML = psdate.toLocaleDateString(lang, dopt) + "   " + psdate.toLocaleTimeString(lang,topt);
+    document.getElementById('nin').innerHTML = nindate.toLocaleDateString(lang, dopt) + "   " + nindate.toLocaleTimeString(lang,topt);
     </script>
+ 
+    <div class="lastupd">Last updated on May 18: added PC Game show time</div>    </center>
     
 </body>
 </html>
