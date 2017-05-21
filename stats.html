@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,400italic,300italic,800,800italic,700italic,600italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic-ext,cyrillic,latin-ext,greek,greek-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="stats.json"></script>
+	<script type="text/javascript" src="backendstats.json"></script>
+	<script type="text/javascript" src="mmrstats.json"></script>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="PageHeader">
+    <img class="logo" src="img/logo-bw.png" height="40px" width="130px"><h1 class="mainheader"><span id="PlayerName"></span>'s&nbsp;<span id="StatPeriod"></span>&nbsp;Stats</h1>
+</div>    
+<br />
+    
+<div class="StatBox" id="OverallStatBox">
+<h2 id="OverallStatHeader" class="StatBoxHeader">Overall Stats</h2>
+<span class="CollapsedIndicator" id="OverallStatCollapsed">+Collapsed+</span>
+<div class="StatBoxContent" id="OverallStatBoxContent">
+
+<div class="SubStatBox">
+<h2>Quick Look</h2>
+<ul>
+<li>Duel MMR: <span id="SkillRating"></span></li>
+<li>TDM MMR: <span id="TDMSkillRating"></span></li>
+<li>CTF MMR: <span id="CTFSkillRating"></span></li>
+<li>DM MMR: <span id="DMSkillRating"></span></li>
+<li>Showdown MMR: <span id="ShowdownSkillRating"></span></li>
+<li>Matches Played: <span id="MatchesPlayed"></span></li>
+<li>Matches Quit: <span id="MatchesQuit"></span></li>
+<li>Time Played: <span id="TimePlayed"></span></li>
+<li>KD Ratio: <span id="KDRatio"></span></li>
+<li>WL Ratio: <span id="WLRatio"></span></li>
+<li>Wins: <span id="Wins"></span></li>
+<li>Losses: <span id="Losses"></span></li>
+<li>Kills: <span id="Kills"></span></li>
+<li>Deaths: <span id="Deaths"></span></li>
+<li>Suicides: <span id="Suicides"></span></li>
+</ul>
+</div>
+
+<div class="SubStatBox">
+<h2>Kill Achievements</h2>
+<ul>
+<li>Double Kills: <span id="MultiKillLevel0"></span></li>
+<li>Multi Kills: <span id="MultiKillLevel1"></span></li>
+<li>Ultra Kills: <span id="MultiKillLevel2"></span></li>
+<li>Monster Kills: <span id="MultiKillLevel3"></span></li>
+<li>Killing Sprees: <span id="SpreeKillLevel0"></span></li>
+<li>Rampages: <span id="SpreeKillLevel1"></span></li>
+<li>Dominatings: <span id="SpreeKillLevel2"></span></li>
+<li>Unstoppables: <span id="SpreeKillLevel3"></span></li>
+<li>Godlikes: <span id="SpreeKillLevel4"></span></li>
+<li>Best Shock Combo: <span id="BestShockCombo"></span></li>
+<li>Amazing Combos: <span id="AmazingCombos"></span></li>
+<li>Air Rox: <span id="AirRox"></span></li>
+<li>Flak Shreds: <span id="FlakShreds"></span></li>
+<li>Air Snot: <span id="AirSnot"></span></li>
+</ul>
+</div>
+
+<div class="SubStatBox">
+<h2>Power Up Achievements</h2>
+<ul>
+<li>UDamage Time: <span id="UDamageTime"></span></li>
+<li>Berserk Time: <span id="BerserkTime"></span></li>
+<li>Invisibility Time: <span id="InvisibilityTime"></span></li>
+<li>UDamage Count: <span id="UDamageCount"></span></li>
+<li>Berserk Count: <span id="BerserkCount"></span></li>
+<li>Invisibility Count: <span id="InvisibilityCount"></span></li>
+<li>Boot Jumps: <span id="BootJumps"></span></li>
+<li>Shield Belt Count: <span id="ShieldBeltCount"></span></li>
+<li>Armor Vest Count: <span id="ArmorVestCount"></span></li>
+<li>Armor Pads Count: <span id="ArmorPadsCount"></span></li>
+<li>Helmet Count: <span id="HelmetCount"></span></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="StatBox" id="WeaponStatBox">
+<h2 id="WeaponStatHeader" class="StatBoxHeader">Weapon Stats</h2>
+<span class="CollapsedIndicator" id="WeaponStatCollapsed">+Collapsed+</span>
+<div class="StatBoxContent" id="WeaponStatBoxContent">
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/ih.png" alt="" width="auto" height="45" align="absmiddle"/> Impact Hammer</h3>
+<ul>
+<li>Kills: <span id="ImpactHammerKills"></span></li>
+<li>Deaths: <span id="ImpactHammerDeaths"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/en.png" alt="" width="auto" height="45" align="absmiddle"/> Enforcer</h3>
+<ul>
+<li>Kills: <span id="EnforcerKills"></span></li>
+<li>Deaths: <span id="EnforcerDeaths"></span></li>
+<li>Shots: <span id="EnforcerShots"></span></li>
+<li>Hits: <span id="EnforcerHits"></span></li>
+<li>Accuracy: <span id="EnforcerAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/br.png" alt="" width="auto" height="45" align="absmiddle"/> BioRifle</h3>
+<ul>
+<li>Kills: <span id="BioRifleKills"></span></li>
+<li>Deaths: <span id="BioRifleDeaths"></span></li>
+<li>Shots: <span id="BioRifleShots"></span></li>
+<li>Hits: <span id="BioRifleHits"></span></li>
+<li>Accuracy: <span id="BioRifleAccuracy"></span></li>
+</ul>
+</div>
+    
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/br.png" alt="" width="auto" height="45" align="absmiddle"/> Grenade Launcher</h3>
+<ul>
+<li>Kills: <span id="BioLauncherKills"></span></li>
+<li>Deaths: <span id="BioLauncherDeaths"></span></li>
+<li>Shots: <span id="BioLauncherShots"></span></li>
+<li>Hits: <span id="BioLauncherHits"></span></li>
+<li>Accuracy: <span id="BioLauncherAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/sr.png" alt="" width="auto" height="45" align="absmiddle"/> Shock Rifle</h3>
+<ul>
+<li>Beam Kills: <span id="ShockBeamKills"></span></li>
+<li>Beam Deaths: <span id="ShockBeamDeaths"></span></li>
+<li>Core Kills: <span id="ShockCoreKills"></span></li>
+<li>Core Deaths: <span id="ShockCoreDeaths"></span></li>
+<li>Combo Kills: <span id="ShockComboKills"></span></li>
+<li>Combo Deaths: <span id="ShockComboDeaths"></span></li>
+<li>Shots: <span id="ShockRifleShots"></span></li>
+<li>Hits: <span id="ShockRifleHits"></span></li>
+<li>Accuracy: <span id="ShockRifleAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/lr.png" alt="" width="auto" height="45" align="absmiddle"/> Link Gun</h3>
+<ul>
+<li>Plasma Kills: <span id="LinkKills"></span></li>
+<li>Plasma Deaths: <span id="LinkDeaths"></span></li>
+<li>Beam Kills: <span id="LinkBeamKills"></span></li>
+<li>Beam Deaths: <span id="LinkBeamDeaths"></span></li>
+<li>Shots: <span id="LinkShots"></span></li>
+<li>Hits: <span id="LinkHits"></span></li>
+<li>Accuracy: <span id="LinkAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/mg.png" alt="" width="auto" height="45" align="absmiddle"/> Minigun</h3>
+<ul>
+<li>Minigun Kills: <span id="MinigunKills"></span></li>
+<li>Minigun Deaths: <span id="MinigunDeaths"></span></li>
+<li>Minigun Shard Kills: <span id="MinigunShardKills"></span></li>
+<li>Minigun Shard Deaths: <span id="MinigunShardDeaths"></span></li>
+<li>Shots: <span id="MinigunShots"></span></li>
+<li>Hits: <span id="MinigunHits"></span></li>
+<li>Accuracy: <span id="MinigunAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/fc.png" alt="" width="auto" height="45" align="absmiddle"/> Flak Cannon</h3>
+<ul>
+<li>Shard Kills: <span id="FlakShardKills"></span></li>
+<li>Shard Deaths: <span id="FlakShardDeaths"></span></li>
+<li>Shell Kills: <span id="FlakShellKills"></span></li>
+<li>Shell Deaths: <span id="FlakShellDeaths"></span></li>
+<li>Shots: <span id="FlakShots"></span></li>
+<li>Hits: <span id="FlakHits"></span></li>
+<li>Accuracy: <span id="FlakAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/rl.png" alt="" width="auto" height="45" align="absmiddle"/> Rocket </h3>
+<ul>
+<li>Kills: <span id="RocketKills"></span></li>
+<li>Deaths: <span id="RocketDeaths"></span></li>
+<li>Shots: <span id="RocketShots"></span></li>
+<li>Hits: <span id="RocketHits"></span></li>
+<li>Accuracy: <span id="RocketAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/snr.png" alt="" width="auto" height="45" align="absmiddle"/> Sniper</h3>
+<ul>
+<li>Sniper Kills: <span id="SniperKills"></span></li>
+<li>Sniper Deaths: <span id="SniperDeaths"></span></li>
+<li>Sniper Headshot Kills: <span id="SniperHeadshotKills"></span></li>
+<li>Sniper Headshot Deaths: <span id="SniperHeadshotDeaths"></span></li>
+<li>Shots: <span id="SniperShots"></span></li>
+<li>Hits: <span id="SniperHits"></span></li>
+<li>Accuracy: <span id="SniperAccuracy"></span></li>
+</ul>
+</div>
+    
+    
+<!--
+#=================================
+# #LightningRifle:  Weapon box, edit text labels as necessary
+#=================================
+-->
+
+ <div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/lightning.png" alt="" width="auto" height="45" align="absmiddle"/> Lightning Rifle</h3>
+<ul>
+<li>Lightning Rifle Primary Kills: <span id="LightningRiflePrimaryKills"></span></li>   
+<li>Lightning Rifle Primary Deaths: <span id="LightningRiflePrimaryDeaths"></span></li>
+<li>Lightning Rifle Secondary Kills: <span id="LightningRifleSecondaryKills"></span></li>
+<li>Lightning Rifle Secondary Deaths: <span id="LightningRifleSecondaryDeaths"></span></li>
+<li>Shots: <span id="LightningRifleShots"></span></li>
+<li>Hits: <span id="LightningRifleHits"></span></li>
+<li>Accuracy: <span id="LightningRifleAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/rd.png" alt="" width="auto" height="45" align="absmiddle"/> Redeemer</h3>
+<ul>
+<li>Kills: <span id="RedeemerKills"></span></li>
+<li>Deaths: <span id="RedeemerDeaths"></span></li>
+<li>Shots: <span id="RedeemerShots"></span></li>
+<li>Hits: <span id="RedeemerHits"></span></li>
+<li>Accuracy: <span id="RedeemerAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/sr.png" alt="" width="auto" height="45" align="absmiddle"/> Instagib</h3>
+<ul>
+<li>Kills: <span id="InstagibKills"></span></li>
+<li>Deaths: <span id="InstagibDeaths"></span></li>
+<li>Shots: <span id="InstagibShots"></span></li>
+<li>Hits: <span id="InstagibHits"></span></li>
+<li>Accuracy: <span id="InstagibAccuracy"></span></li>
+</ul>
+</div>
+
+<div class="WeaponBox">
+<h3 class="WeaponStatHeader"><img src="img/xloc.png" alt="" width="auto" height="45" align="absmiddle"/> Translocator</h3>
+<ul>
+<li>Kills: <span id="TelefragKills"></span></li>
+<li>Deaths: <span id="TelefragDeaths"></span></li>
+</ul>
+</div>
+    
+<br /><br />
+    
+<div class="DiagramBox">
+<h2 class="DiagramHeader">KILLS BY WEAPON</h2>
+    <div id="killchart"></div>
+</div>
+
+<div class="DiagramBox">
+<h2 class="DiagramHeader">DEATHS BY WEAPON</h2>
+    <div id="deathchart"></div>
+</div>
+    
+</div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="StatBox" id="MiscStatBox">
+<h2 id="MiscStatHeader" class="StatBoxHeader">Miscellaneous</h2>
+<span class="CollapsedIndicator" id="MiscStatCollapsed">+Collapsed+</span>
+<div class="StatBoxContent" id="MiscStatBoxContent">
+
+<div class="SubStatBox">
+<h2>Movement</h2>
+<ul>
+<li>Run Distance (m): <span id="RunDist"></span></li>
+<li>Sprint Distance (m): <span id="SprintDist"></span></li>
+<li>In-Air Distance (m): <span id="InAirDist"></span></li>
+<li>Swim Distance (m): <span id="SwimDist"></span></li>
+<li>Translocation Distance (m): <span id="TranslocDist"></span></li>
+<li>Dodge Count: <span id="NumDodges"></span></li>
+<li>Wall Dodge Count: <span id="NumWallDodges"></span></li>
+<li>Jump Count: <span id="NumJumps"></span></li>
+<li>Lift Jump Count: <span id="NumLiftJumps"></span></li>
+<li>Floor Slide Count: <span id="NumFloorSlides"></span></li>
+<li>Wall Run Count: <span id="NumWallRuns"></span></li>
+<li>Impact Jump Count: <span id="NumImpactJumps"></span></li>
+<li>Rocket Jump Count: <span id="NumRocketJumps"></span></li>
+<li>Slide Distance (m): <span id="SlideDist"></span></li>
+<li>Wall Run Distance (m): <span id="WallRunDist"></span></li>
+</ul>
+</div>
+
+<div class="SubStatBox">
+<h2>Capture The Flag</h2>
+<ul>
+<li>Flag Captures: <span id="FlagCaptures"></span></li>
+<li>Flag Returns: <span id="FlagReturns"></span></li>
+<li>Flag Assists: <span id="FlagAssists"></span></li>
+<li>Flag Held Deny: <span id="FlagHeldDeny"></span></li>
+<li>Flag Held Deny Time: <span id="FlagHeldDenyTime"></span></li>
+<li>Flag Held Time: <span id="FlagHeldTime"></span></li>
+<li>Flag Return Points: <span id="FlagReturnPoints"></span></li>
+<li>Carry Assists: <span id="CarryAssist"></span></li>
+<li>Carry Assist Points: <span id="CarryAssistPoints"></span></li>
+<li>Flag Cap Points: <span id="FlagCapPoints"></span></li>
+<li>Defend Assists: <span id="DefendAssist"></span></li>
+<li>Defend Assist Points: <span id="DefendAssistPoints"></span></li>
+<li>Return Assists: <span id="ReturnAssist"></span></li>
+<li>Return Assist Points: <span id="ReturnAssistPoints"></span></li>
+<li>Team Cap Points: <span id="TeamCapPoints"></span></li>
+<li>Enemy FC Damage: <span id="EnemyFCDamage"></span></li>
+<li>FC Kills: <span id="FCKills"></span></li>
+<li>FC Kill Points: <span id="FCKillPoints"></span></li>
+<li>FC Support Kills: <span id="FlagSupportKills"></span></li>
+<li>FC Support Kill Points: <span id="FlagSupportKillPoints"></span></li>
+<li>Kill Points: <span id="RegularKillPoints"></span></li>
+<li>Flag Grabs: <span id="FlagGrabs"></span></li>
+<li>Attacker Score: <span id="AttackerScore"></span></li>
+<li>Defender Score: <span id="DefenderScore"></span></li>
+<li>Supporter Score: <span id="SupporterScore"></span></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="StatBox" id="MatchHistoryStatBox">
+<h2 id="MatchHistoryStatHeader" class="StatBoxHeader">Recent Match History</h2>
+<span class="CollapsedIndicator" id="MatchHistoryStatCollapsed">+Collapsed+</span>
+<div class="StatBoxContent" id="MatchHistoryStatBoxContent">
+<span id="Matches">
+</span>
+</div>
+</div>
+
+</div>
+
+<div id='NoPlayerStats'>
+<h1>No Player Stats Available</h1>
+</div>
+
+<script>
+
+mmrRating = function(mmrRatingType)
+{
+	for (statIdx in MmrStats)
+	{
+		if (MmrStats[statIdx].ratingtype == mmrRatingType)
+		{
+			return MmrStats[statIdx].rating;
+		}
+	}
+	
+	return 0;
+}
+
+mmrNumGamesPlayed = function(mmrRatingType)
+{
+	for (statIdx in MmrStats)
+	{
+		if (MmrStats[statIdx].ratingtype == mmrRatingType)
+		{
+			return MmrStats[statIdx].numgamesplayed;
+		}
+	}
+	
+	return 0;
+}
+
+backendStats = function(StatName)
+{
+	for (statIdx in BackendStats)
+	{
+		if (BackendStats[statIdx].name == StatName)
+		{
+			return BackendStats[statIdx].value;
+		}
+	}
+	
+	return 0;
+}
+
+// Here goes google diagram magic:
+
+google.charts.load("current", {packages:["corechart"]});
+    
+//Kills
+google.charts.setOnLoadCallback(drawKillsChart);
+ function drawKillsChart() {
+    var data = google.visualization.arrayToDataTable([
+          ['Weapon', 'Kills'],
+          ['Impact Hammer',  backendStats("ImpactHammerKills")],
+          ['Enforcer',  backendStats("EnforcerKills")],
+          ['Bio Rifle',  backendStats("BioRifleKills")],
+          ['Grenade Launcher',  backendStats("BioLauncherKills")],
+          ['Shock Rifle', backendStats("ShockBeamKills")+backendStats("ShockCoreKills")+backendStats("ShockComboKills") ],
+          ['Link Gun', backendStats("LinkKills")+backendStats("LinkBeamKills")],
+          ['Minigun', backendStats("MinigunKills")+backendStats("MinigunShardKills")],
+          ['Flak Cannon', backendStats("FlakShardKills")+backendStats("FlakShellKills")],
+          ['Rocket Launcher',    backendStats("RocketKills")],
+          ['Lightning Rifle', backendStats("LightningRiflePrimaryKills")+backendStats("LightningRifleSecondaryKills") ],
+          ['Sniper Rifle',    backendStats("SniperKills")+backendStats("SniperHeadshotKills")],
+        ]);
+     
+
+        var options = {
+          backgroundColor: '#A3A3A3',
+          fontName: 'Roboto Condensed',
+          pieSliceText: 'value',
+          pieSliceTextStyle: {color: '#000000', fontName: 'Roboto Condensed', fontSize: 18},
+          tooltip: {ignoreBounds: true,isHtml:true, textStyle:{color: 'black', fontName: 'Open Sans', fontSize: 16, backgroundColor: '#A3A3A3'} },
+          pieHole: 0.3,
+          legend: { position: 'labeled', textStyle: {color: 'black', fontSize: 20} },
+		  slices: { // weapon slices colors
+            0: { color: '#ddaf35' },  //IH
+			1: { color: '#e6e6e6' },  //Enf
+			2: { color: '#18a501' },  //Bio
+			3: { color: '#7f96bf' },  //GrenadeL
+			4: { color: '#b360d9' },  //ASMD
+			5: { color: '#60d9aa' },  //Link
+			6: { color: '#18c2d1' },  //Minigun
+			7: { color: '#cfd118' },  // Flak
+            9: { color: '#eab0e8' }, // LG  #LightningRifle
+            10: { color: '#666666' } // Sniper
+          },
+          chartArea: {left:20,top:20,right:20,bottom:20,width:'100%',height:'100%'},
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('killchart'));
+        chart.draw(data, options);     
+}
+    
+//Deaths
+google.charts.setOnLoadCallback(drawDeathsChart);
+ function drawDeathsChart() {
+    var data = google.visualization.arrayToDataTable([
+          ['Weapon', 'Deaths'],
+          ['Impact Hammer',  backendStats("ImpactHammerDeaths")],
+          ['Enforcer',  backendStats("EnforcerDeaths")],
+          ['Bio Rifle',  backendStats("BioRifleDeaths")],
+          ['Grenade Launcher',  backendStats("BioLauncherDeaths")],
+          ['Shock Rifle', backendStats("ShockBeamDeaths")+backendStats("ShockCoreDeaths")+backendStats("ShockComboDeaths") ],
+          ['Link Gun', backendStats("LinkDeaths")+backendStats("LinkBeamDeaths")],
+          ['Minigun', backendStats("MinigunDeaths")+backendStats("MinigunShardDeaths")],
+          ['Flak Cannon', backendStats("FlakShardDeaths")+backendStats("FlakShellDeaths")],
+          ['Rocket Launcher',    backendStats("RocketDeaths")],
+          ['Lightning Rifle', backendStats("LightningRiflePrimaryDeaths")+backendStats("LightningRifleSecondaryDeaths") ],
+          ['Sniper Rifle',    backendStats("SniperDeaths")+backendStats("SniperHeadshotDeaths")],
+        ]);
+
+     
+        var options = {
+          backgroundColor: '#A3A3A3',
+          fontName: 'Roboto Condensed',
+          pieSliceText: 'value',
+          pieSliceTextStyle: {color: '#000000', fontName: 'Roboto Condensed', fontSize: 18},
+          tooltip: {ignoreBounds: true,isHtml:true, textStyle:{color: 'black', fontName: 'Open Sans', fontSize: 16, backgroundColor: '#A3A3A3'} },
+          pieHole: 0.3,
+          legend: { position: 'labeled', textStyle: {color: 'black', fontSize: 20} },
+		  slices: { // weapon slices colors
+            0: { color: '#ddaf35' },  //IH
+			1: { color: '#e6e6e6' },  //Enf
+			2: { color: '#18a501' },  //Bio
+			3: { color: '#7f96bf' },  //GrenadeL
+			4: { color: '#b360d9' },  //ASMD
+			5: { color: '#60d9aa' },  //Link
+			6: { color: '#18c2d1' },  //Minigun
+			7: { color: '#cfd118' },  // Flak
+			8: { color: '#ff4d4d' }, // RL
+            9: { color: '#eab0e8' }, // LG  #LightningRifle
+            10: { color: '#666666' } // Sniper
+          },
+          chartArea: {left:20,top:20,right:20,bottom:20,width:'100%',height:'100%'},
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('deathchart'));
+        chart.draw(data, options);
+     
+     
+}
+    
+
+toHoursMinutesSeconds = function(rawtime)
+{
+	var hours = Math.floor(rawtime / 3600);
+	var minutes = Math.floor((rawtime  - (hours * 3600)) / 60);
+	var seconds = rawtime - hours * 3600 - minutes * 60;
+	
+	if (hours < 10)
+	{
+		hours = "0" + hours;
+	}
+	
+	if (minutes < 10)
+	{
+		minutes = "0" + minutes;
+	}
+	
+	if (seconds < 10)
+	{
+		seconds = "0" + seconds;
+	}
+	
+	var timestring = hours + ":" + minutes + ":" + seconds;
+	return timestring;
+}
+
+convertHits = function(number)
+{
+	var returnvalue = number / 100;
+	
+	if (isNaN(returnvalue))
+	{
+		returnvalue = 0;
+	}
+	
+	return returnvalue;
+}
+toPercentage = function(number)
+{
+	if (isNaN(number))
+	{
+		return "0%";
+	}
+	
+	return (number * 100).toFixed(2) + "%";
+}
+
+openNewStatsPage = function(StatsID)
+{
+	window.ue.StatsViewer.changestatsviewertarget(StatsID);
+}
+
+<!-- var Stats = {"StatsID":"f9032386ade24ed3815808aff8ae1a52","PlayerName":"TheWhiteMyst","SkillRating":0,"Kills":0,"Deaths":0,"Suicides":0,"ImpactHammerKills":0,"EnforcerKills":0,"BioRifleKills":0,"ShockBeamKills":0,"ShockCoreKills":0,"ShockComboKills":0,"LinkKills":0,"LinkBeamKills":0,"MinigunKills":0,"MinigunShardKills":0,"FlakShardKills":0,"FlakShellKills":0,"RocketKills":0,"SniperKills":0,"SniperHeadshotKills":0,"RedeemerKills":0,"InstagibKills":0,"ImpactHammerDeaths":0,"EnforcerDeaths":0,"BioRifleDeaths":0,"ShockBeamDeaths":0,"ShockCoreDeaths":0,"ShockComboDeaths":0,"LinkDeaths":0,"LinkBeamDeaths":0,"MinigunDeaths":0,"MinigunShardDeaths":0,"FlakShardDeaths":0,"FlakShellDeaths":0,"RocketDeaths":0,"SniperDeaths":0,"SniperHeadshotDeaths":0,"RedeemerDeaths":0,"InstagibDeaths":0,"Aliases":[{"Name":"TheWhiteMyst"}]}; -->
+
+
+if (typeof Stats == 'undefined')
+{
+	document.getElementById('PlayerStats').style.display = 'none';
+	document.getElementById('NoPlayerStats').style.display = 'block';
+}
+else
+{
+    
+	if (QueryWindow == "alltime")
+	{
+		document.getElementById('StatPeriod').innerHTML = "All-Time";
+	}
+	else if (QueryWindow == "monthly")
+	{
+		document.getElementById('StatPeriod').innerHTML = "Monthly";	
+	}
+	else if (QueryWindow == "weekly")
+	{
+		document.getElementById('StatPeriod').innerHTML = "Weekly";	
+	}
+	else if (QueryWindow == "daily")
+	{
+		document.getElementById('StatPeriod').innerHTML = "Daily";	
+	}
+	
+	document.getElementById('NoPlayerStats').style.display = 'none';
+	
+	document.getElementById('PlayerName').innerHTML = Stats.PlayerName;
+	
+	if (mmrNumGamesPlayed('SkillRating') < 10)
+	{
+		document.getElementById('SkillRating').innerHTML = "Unranked";
+	}
+	else
+	{
+		document.getElementById('SkillRating').innerHTML = mmrRating('SkillRating');
+	}
+	
+	if (mmrNumGamesPlayed('TDMSkillRating') < 10)
+	{
+		document.getElementById('TDMSkillRating').innerHTML = "Unranked";
+	}
+	else
+	{
+		document.getElementById('TDMSkillRating').innerHTML = mmrRating('TDMSkillRating');
+	}
+	
+	if (mmrNumGamesPlayed('CTFSkillRating') < 10)
+	{
+		document.getElementById('CTFSkillRating').innerHTML = "Unranked";
+	}
+	else
+	{
+		document.getElementById('CTFSkillRating').innerHTML = mmrRating('CTFSkillRating');
+	}
+	
+	if (mmrNumGamesPlayed('DMSkillRating')< 10)
+	{
+		document.getElementById('DMSkillRating').innerHTML = "Unranked";
+	}
+	else
+	{
+		document.getElementById('DMSkillRating').innerHTML = mmrRating('DMSkillRating');
+	}
+	
+	if (mmrNumGamesPlayed('ShowdownSkillRating')< 10)
+	{
+		document.getElementById('ShowdownSkillRating').innerHTML = "Unranked";
+	}
+	else
+	{
+		document.getElementById('ShowdownSkillRating').innerHTML = mmrRating('ShowdownSkillRating');
+	}
+	
+	document.getElementById('MatchesPlayed').innerHTML = backendStats("MatchesPlayed");
+	document.getElementById('MatchesQuit').innerHTML = backendStats("MatchesQuit");
+	
+	document.getElementById('TimePlayed').innerHTML = toHoursMinutesSeconds(backendStats("TimePlayed"));
+		
+	document.getElementById('Wins').innerHTML = backendStats("Wins");
+	document.getElementById('Losses').innerHTML = backendStats("Losses");
+	
+	var wins = Number(backendStats("Wins"));
+	var losses = Number(backendStats("Losses"));
+	if (losses > 0)
+	{
+		document.getElementById('WLRatio').innerHTML = (wins / losses).toFixed(2);
+	}
+	else
+	{
+		document.getElementById('WLRatio').innerHTML = "infinite";
+	}
+	
+	document.getElementById('Kills').innerHTML = backendStats("Kills");
+	document.getElementById('Deaths').innerHTML = backendStats("Deaths");
+	
+	var kills = Number(backendStats("Kills"));
+	var deaths = Number(backendStats("Deaths"));
+	if (deaths > 0)
+	{
+		document.getElementById('KDRatio').innerHTML = (kills / deaths).toFixed(2);
+	}
+	else
+	{
+		document.getElementById('KDRatio').innerHTML = "infinite";
+	}
+	
+	document.getElementById('Suicides').innerHTML = backendStats("Suicides");
+
+	document.getElementById('MultiKillLevel0').innerHTML = backendStats("MultiKillLevel0");
+	document.getElementById('MultiKillLevel1').innerHTML = backendStats("MultiKillLevel1");
+	document.getElementById('MultiKillLevel2').innerHTML = backendStats("MultiKillLevel2");
+	document.getElementById('MultiKillLevel3').innerHTML = backendStats("MultiKillLevel3");
+	
+	document.getElementById('SpreeKillLevel0').innerHTML = backendStats("SpreeKillLevel0");
+	document.getElementById('SpreeKillLevel1').innerHTML = backendStats("SpreeKillLevel1");
+	document.getElementById('SpreeKillLevel2').innerHTML = backendStats("SpreeKillLevel2");
+	document.getElementById('SpreeKillLevel3').innerHTML = backendStats("SpreeKillLevel3");
+	document.getElementById('SpreeKillLevel4').innerHTML = backendStats("SpreeKillLevel4");
+	
+	document.getElementById('BestShockCombo').innerHTML = backendStats("BestShockCombo");
+	document.getElementById('AmazingCombos').innerHTML = backendStats("AmazingCombos");
+	document.getElementById('AirRox').innerHTML = backendStats("AirRox");
+	document.getElementById('FlakShreds').innerHTML = backendStats("FlakShreds");
+	document.getElementById('AirSnot').innerHTML = backendStats("AirSnot");
+	
+	document.getElementById('ImpactHammerKills').innerHTML = backendStats("ImpactHammerKills");
+	document.getElementById('ImpactHammerDeaths').innerHTML = backendStats("ImpactHammerDeaths");
+	document.getElementById('EnforcerKills').innerHTML = backendStats("EnforcerKills");
+	document.getElementById('EnforcerDeaths').innerHTML = backendStats("EnforcerDeaths");
+	document.getElementById('BioRifleKills').innerHTML = backendStats("BioRifleKills");
+	document.getElementById('BioRifleDeaths').innerHTML = backendStats("BioRifleDeaths");
+    document.getElementById('BioLauncherKills').innerHTML = backendStats("BioLauncherKills");
+	document.getElementById('BioLauncherDeaths').innerHTML = backendStats("BioLauncherDeaths");
+	document.getElementById('ShockBeamKills').innerHTML = backendStats("ShockBeamKills");
+	document.getElementById('ShockBeamDeaths').innerHTML = backendStats("ShockBeamDeaths");
+	document.getElementById('ShockCoreKills').innerHTML = backendStats("ShockCoreKills");
+	document.getElementById('ShockCoreDeaths').innerHTML = backendStats("ShockCoreDeaths");
+	document.getElementById('ShockComboKills').innerHTML = backendStats("ShockComboKills");
+	document.getElementById('ShockComboDeaths').innerHTML = backendStats("ShockComboDeaths");
+	document.getElementById('LinkKills').innerHTML = backendStats("LinkKills");
+	document.getElementById('LinkDeaths').innerHTML = backendStats("LinkDeaths");
+	document.getElementById('LinkBeamKills').innerHTML = backendStats("LinkBeamKills");
+	document.getElementById('LinkBeamDeaths').innerHTML = backendStats("LinkBeamDeaths");
+	document.getElementById('MinigunKills').innerHTML = backendStats("MinigunKills");
+	document.getElementById('MinigunDeaths').innerHTML = backendStats("MinigunDeaths");
+	document.getElementById('MinigunShardKills').innerHTML = backendStats("MinigunShardKills");
+	document.getElementById('MinigunShardDeaths').innerHTML = backendStats("MinigunShardDeaths");
+	document.getElementById('FlakShardKills').innerHTML = backendStats("FlakShardKills");
+	document.getElementById('FlakShardDeaths').innerHTML = backendStats("FlakShardDeaths");
+	document.getElementById('FlakShellKills').innerHTML = backendStats("FlakShellKills");
+	document.getElementById('FlakShellDeaths').innerHTML = backendStats("FlakShellDeaths");
+	document.getElementById('RocketKills').innerHTML = backendStats("RocketKills");
+	document.getElementById('RocketDeaths').innerHTML = backendStats("RocketDeaths");
+	document.getElementById('SniperKills').innerHTML = backendStats("SniperKills") + backendStats("SniperHeadshotKills");
+	document.getElementById('SniperDeaths').innerHTML = backendStats("SniperDeaths") + backendStats("SniperHeadshotDeaths");
+	document.getElementById('SniperHeadshotKills').innerHTML = backendStats("SniperHeadshotKills");
+	document.getElementById('SniperHeadshotDeaths').innerHTML = backendStats("SniperHeadshotDeaths");
+	document.getElementById('LightningRiflePrimaryKills').innerHTML = backendStats("LightningRiflePrimaryKills"); 
+	document.getElementById('LightningRiflePrimaryDeaths').innerHTML = backendStats("LightningRiflePrimaryDeaths");
+	document.getElementById('LightningRifleSecondaryKills').innerHTML = backendStats("LightningRifleSecondaryKills");
+	document.getElementById('LightningRifleSecondaryDeaths').innerHTML = backendStats("LightningRifleSecondaryDeaths");
+	document.getElementById('RedeemerKills').innerHTML = backendStats("RedeemerKills");
+	document.getElementById('RedeemerDeaths').innerHTML = backendStats("RedeemerDeaths");
+	document.getElementById('InstagibKills').innerHTML = backendStats("InstagibKills");
+	document.getElementById('InstagibDeaths').innerHTML = backendStats("InstagibDeaths");
+	document.getElementById('TelefragKills').innerHTML = backendStats("TelefragKills");
+	document.getElementById('TelefragDeaths').innerHTML = backendStats("TelefragDeaths");
+	
+	document.getElementById('EnforcerShots').innerHTML = backendStats("EnforcerShots");
+	document.getElementById('BioRifleShots').innerHTML = backendStats("BioRifleShots");
+    document.getElementById('BioLauncherShots').innerHTML = backendStats("BioLauncherShots");
+	document.getElementById('ShockRifleShots').innerHTML = backendStats("ShockRifleShots");
+	document.getElementById('LinkShots').innerHTML = backendStats("LinkShots");
+	document.getElementById('MinigunShots').innerHTML = backendStats("MinigunShots");
+	document.getElementById('FlakShots').innerHTML = backendStats("FlakShots");
+	document.getElementById('RocketShots').innerHTML = backendStats("RocketShots");
+    document.getElementById('SniperShots').innerHTML = backendStats("SniperShots");
+	document.getElementById('LightningRifleShots').innerHTML = backendStats("LightningRifleShots");
+    document.getElementById('RedeemerShots').innerHTML = backendStats("RedeemerShots");
+	document.getElementById('InstagibShots').innerHTML = backendStats("InstagibShots");
+
+	document.getElementById('EnforcerHits').innerHTML = convertHits(backendStats("EnforcerHits"));
+	document.getElementById('BioRifleHits').innerHTML = convertHits(backendStats("BioRifleHits"));
+    document.getElementById('BioLauncherHits').innerHTML = convertHits(backendStats("BioLauncherHits"));
+	document.getElementById('ShockRifleHits').innerHTML = convertHits(backendStats("ShockRifleHits"));
+	document.getElementById('LinkHits').innerHTML = convertHits(backendStats("LinkHits"));
+	document.getElementById('MinigunHits').innerHTML = convertHits(backendStats("MinigunHits"));
+	document.getElementById('FlakHits').innerHTML = convertHits(backendStats("FlakHits"));
+	document.getElementById('RocketHits').innerHTML = convertHits(backendStats("RocketHits"));
+	document.getElementById('SniperHits').innerHTML = convertHits(backendStats("SniperHits"));
+	document.getElementById('LightningRifleHits').innerHTML = convertHits(backendStats("LightningRifleHits"));
+	document.getElementById('RedeemerHits').innerHTML = convertHits(backendStats("RedeemerHits"));
+	document.getElementById('InstagibHits').innerHTML = convertHits(backendStats("InstagibHits"));
+
+	document.getElementById('EnforcerAccuracy').innerHTML = toPercentage(backendStats("EnforcerHits") / backendStats("EnforcerShots") / 100);
+	document.getElementById('BioRifleAccuracy').innerHTML = toPercentage(backendStats("BioRifleHits") / backendStats("BioRifleShots") / 100);
+    document.getElementById('BioLauncherAccuracy').innerHTML = toPercentage(backendStats("BioLauncherHits") / backendStats("BioLauncherShots") / 100);
+	document.getElementById('ShockRifleAccuracy').innerHTML = toPercentage(backendStats("ShockRifleHits") / backendStats("ShockRifleShots") / 100);
+	document.getElementById('LinkAccuracy').innerHTML = toPercentage(backendStats("LinkHits") / backendStats("LinkShots") / 100);
+	document.getElementById('MinigunAccuracy').innerHTML = toPercentage(backendStats("MinigunHits") / backendStats("MinigunShots") / 100);
+	document.getElementById('FlakAccuracy').innerHTML = toPercentage(backendStats("FlakHits") / backendStats("FlakShots") / 100);
+	document.getElementById('RocketAccuracy').innerHTML = toPercentage(backendStats("RocketHits") / backendStats("RocketShots") / 100);
+	document.getElementById('SniperAccuracy').innerHTML = toPercentage(backendStats("SniperHits") / backendStats("SniperShots") / 100);
+	document.getElementById('LightningRifleAccuracy').innerHTML = toPercentage(backendStats("LightningRifleHits") / backendStats("LightningRifleShots") / 100);
+	document.getElementById('RedeemerAccuracy').innerHTML = toPercentage(backendStats("RedeemerHits") / backendStats("RedeemerShots") / 100);
+	document.getElementById('InstagibAccuracy').innerHTML = toPercentage(backendStats("InstagibHits") / backendStats("InstagibShots") / 100);
+	
+	document.getElementById('UDamageTime').innerHTML = backendStats("UDamageTime");
+	document.getElementById('BerserkTime').innerHTML = backendStats("BerserkTime");
+	document.getElementById('InvisibilityTime').innerHTML = backendStats("InvisibilityTime");
+	document.getElementById('UDamageCount').innerHTML = backendStats("UDamageCount");
+	document.getElementById('BerserkCount').innerHTML = backendStats("BerserkCount");
+	document.getElementById('InvisibilityCount').innerHTML = backendStats("InvisibilityCount");
+	document.getElementById('BootJumps').innerHTML = backendStats("BootJumps");
+	document.getElementById('ShieldBeltCount').innerHTML = backendStats("ShieldBeltCount");
+	document.getElementById('ArmorVestCount').innerHTML = backendStats("ArmorVestCount");
+	document.getElementById('ArmorPadsCount').innerHTML = backendStats("ArmorPadsCount");
+	document.getElementById('HelmetCount').innerHTML = backendStats("HelmetCount");
+
+	document.getElementById('RunDist').innerHTML = backendStats("RunDist") / 100;
+	document.getElementById('SprintDist').innerHTML = backendStats("SprintDist") / 100;
+	document.getElementById('InAirDist').innerHTML = backendStats("InAirDist") / 100;
+	document.getElementById('SwimDist').innerHTML = backendStats("SwimDist") / 100;
+	document.getElementById('TranslocDist').innerHTML = backendStats("TranslocDist") / 100;
+	document.getElementById('NumDodges').innerHTML = backendStats("NumDodges");
+	document.getElementById('NumWallDodges').innerHTML = backendStats("NumWallDodges");
+	document.getElementById('NumJumps').innerHTML = backendStats("NumJumps");
+	document.getElementById('NumLiftJumps').innerHTML = backendStats("NumLiftJumps");
+	document.getElementById('NumFloorSlides').innerHTML = backendStats("NumFloorSlides");
+	document.getElementById('NumWallRuns').innerHTML = backendStats("NumWallRuns");
+	document.getElementById('NumImpactJumps').innerHTML = backendStats("NumImpactJumps");
+	document.getElementById('NumRocketJumps').innerHTML = backendStats("NumRocketJumps");
+	document.getElementById('SlideDist').innerHTML = backendStats("SlideDist") / 100;
+	document.getElementById('WallRunDist').innerHTML = backendStats("WallRunDist") / 100;
+
+	document.getElementById('FlagCaptures').innerHTML = backendStats("FlagCaptures");
+	document.getElementById('FlagReturns').innerHTML = backendStats("FlagReturns");
+	document.getElementById('FlagAssists').innerHTML = backendStats("FlagAssists");
+	document.getElementById('FlagHeldDeny').innerHTML = backendStats("FlagHeldDeny");
+	document.getElementById('FlagHeldDenyTime').innerHTML = backendStats("FlagHeldDenyTime");
+	document.getElementById('FlagHeldTime').innerHTML = backendStats("FlagHeldTime");
+	document.getElementById('FlagReturnPoints').innerHTML = backendStats("FlagReturnPoints");
+	document.getElementById('CarryAssist').innerHTML = backendStats("CarryAssist");
+	document.getElementById('CarryAssistPoints').innerHTML = backendStats("CarryAssistPoints");		
+	document.getElementById('FlagCapPoints').innerHTML = backendStats("FlagCapPoints");
+	document.getElementById('DefendAssist').innerHTML = backendStats("DefendAssist");
+	document.getElementById('DefendAssistPoints').innerHTML = backendStats("DefendAssistPoints");
+	document.getElementById('ReturnAssist').innerHTML = backendStats("ReturnAssist");
+	document.getElementById('ReturnAssistPoints').innerHTML = backendStats("ReturnAssistPoints");
+	document.getElementById('TeamCapPoints').innerHTML = backendStats("TeamCapPoints");	
+	document.getElementById('EnemyFCDamage').innerHTML = backendStats("EnemyFCDamage");
+	document.getElementById('FCKills').innerHTML = backendStats("FCKills");
+	document.getElementById('FCKillPoints').innerHTML = backendStats("FCKillPoints");
+	document.getElementById('FlagSupportKills').innerHTML = backendStats("FlagSupportKills");
+	document.getElementById('FlagSupportKillPoints').innerHTML = backendStats("FlagSupportKillPoints");
+	document.getElementById('RegularKillPoints').innerHTML = backendStats("RegularKillPoints");	
+	document.getElementById('FlagGrabs').innerHTML = backendStats("FlagGrabs");
+	document.getElementById('AttackerScore').innerHTML = backendStats("AttackerScore");
+	document.getElementById('DefenderScore').innerHTML = backendStats("DefenderScore");
+	document.getElementById('SupporterScore').innerHTML = backendStats("SupporterScore");
+		
+    
+// ======================================================
+// Recent games section
+// 
+// DONE: selective minimizing
+// TODO: Replicate in-game scoreboard layout (possible sorting?)
+// 
+// ======================================================
+    
+	if (typeof Stats.Matches != 'undefined')
+	{
+		for (var i = 0; i < Stats.Matches.length; i++)
+		{
+			var MatchNode = document.createElement("div");
+            var matchid = "Match" + (i+1).toString(); // for a handy reference later
+            
+			MatchNode.className = "MatchBox"; 
+            document.getElementById('Matches').appendChild(MatchNode);
+
+            var MatchHeader = document.createElement("div");
+            MatchHeader.className = "matchHeader";
+            MatchHeader.id = "matchHeader" + matchid;
+            
+            // collapse/expand icon sheneigans
+            // expand
+            var MaximizeIcon = document.createElement("div");
+            MaximizeIcon.className = "MatchExpandIcon";
+            MaximizeIcon.id = "Expand" + matchid;
+            var ExpandIcon = document.createElement("span");
+            ExpandIcon.innerHTML = "+";
+            MaximizeIcon.appendChild(ExpandIcon);
+            
+            var MinimizeIcon = document.createElement("div");
+            MinimizeIcon.className = "MatchCollapseIcon";
+            MinimizeIcon.id = "Collapse" + matchid;
+            MinimizeIcon.style.display = "None";
+            var CollapseIcon = document.createElement("span");
+            CollapseIcon.innerHTML = "–";
+            MinimizeIcon.appendChild(CollapseIcon);
+            
+            MatchHeader.appendChild(MaximizeIcon);
+            MatchHeader.appendChild(MinimizeIcon);
+            
+            
+            var MatchNumber = document.createElement("div");
+            var textnode = document.createTextNode((i+1).toString() + ". ");
+            MatchNumber.appendChild(textnode);
+            MatchNumber.className = "matchNumber";
+            MatchHeader.appendChild(MatchNumber);
+            
+            
+            
+            // Second match header bit, game mode
+            // This really should be FriendlyName pulled from the current localization.
+            if (typeof Stats.Matches[i].GameType != 'undefined')
+			{
+				var MatchGameType = document.createElement("div");
+                MatchGameType.className = "matchGameType";
+				var GameTypeString = Stats.Matches[i].GameType;
+				
+				<!-- Clear off "/Game/UnrealTournament." -->
+				if (GameTypeString.indexOf(".") != -1)
+				{
+					GameTypeString = GameTypeString.substr(GameTypeString.indexOf(".") + 1);
+				}
+				
+				if (GameTypeString == 'UTDMGameMode')
+				{
+					GameTypeString = 'DEATHMATCH';
+				}
+				else if (GameTypeString == 'UTTeamDMGameMode')
+				{
+					GameTypeString = 'TEAM DEATHMATCH';
+				}
+				else if (GameTypeString == 'UTCTFGameMode')
+				{
+					GameTypeString = 'CAPTURE THE FLAG';
+				}
+				else if (GameTypeString == 'UTShowdownGame')
+				{
+					GameTypeString = 'SHOWDOWN';
+				}
+				else if (GameTypeString == 'UTFlagRunGame')
+				{
+					GameTypeString = 'BLITZ';
+				}
+				else if (GameTypeString == 'UTFlagRunPvEGame')
+				{
+					GameTypeString = 'SIEGE';
+				}
+				else if (GameTypeString == 'UTDuelGame')
+				{
+					GameTypeString = 'DUEL';
+				}
+				else if (GameTypeString == 'UTTeamShowdownGame')
+				{
+					GameTypeString = 'TEAM SHOWDOWN';
+				}
+				
+				var MapNameString = Stats.Matches[i].MapName;
+				if (MapNameString != 'undefined' && MapNameString.length > 0)
+				{
+					GameTypeString += ' on ' + MapNameString;
+				}
+				
+				var textnode = document.createTextNode(GameTypeString);
+				MatchGameType.appendChild(textnode);
+                MatchHeader.appendChild(MatchGameType);				
+			}
+
+            
+            // Third match header bit, score
+            // For team modes this will be teams' scores
+			if (typeof Stats.Matches[i].Teams != 'undefined')
+			{
+                
+                var MatchScore = document.createElement("div");
+                MatchScore.className = "matchScore";
+                var RedScore = Stats.Matches[i].Teams[0].Score;
+                var BlueScore = Stats.Matches[i].Teams[1].Score;
+                if (Stats.Matches[i].Teams.length == 3){
+                 var GreenScore = Stats.Matches[i].Teams[2].Score;
+                }
+                if (Stats.Matches[i].Teams.length == 4){
+                 var GoldScore = Stats.Matches[i].Teams[3].Score;
+                }
+                
+                var Score = document.createTextNode("Red " + RedScore + " : " + BlueScore + " Blue");
+                
+                MatchScore.appendChild(Score);
+                MatchHeader.appendChild(MatchScore);
+			}
+            else{
+                // DM game, just add a placeholder to replace later;
+                var MatchScore = document.createElement("div");
+                MatchScore.className = "matchScore";
+                var DMPlace = document.createElement("span");
+                DMPlace.id = "DMPlace";
+                MatchScore.appendChild(DMPlace);
+                MatchHeader.appendChild(MatchScore);                
+            }
+            
+            MatchNode.appendChild(MatchHeader);
+			
+            // adding a new div to hide just the match information and leave the header visible
+            var MatchData = document.createElement("div");
+            MatchData.id = matchid; // give it a unique id
+            MatchData.className = "MatchData" // can have a unique style as well
+            MatchData.style.display = "none"; // hide it by default
+            
+            MatchNode.appendChild(MatchData);
+            
+			// generic player list for DM-based game modes
+            var PlayerListNode = document.createElement("ul");
+            PlayerListNode.className = "Scoreboard_DMPlayerList";
+			MatchData.appendChild(PlayerListNode);
+            
+            // if team game, create unique list for each team
+            if (typeof Stats.Matches[i].Teams != 'undefined')
+			{
+                
+                var BlueTeamBox = document.createElement("div");
+                BlueTeamBox.className = "blueTeamList";
+                var BlueTeamList = document.createElement("ul");
+                BlueTeamBox.appendChild(BlueTeamList);
+                
+                var RedTeamBox = document.createElement("div");
+                RedTeamBox.className = "redTeamList";
+                var RedTeamList = document.createElement("ul");
+                RedTeamBox.appendChild(RedTeamList);
+            
+                var GreenTeamBox = document.createElement("div");
+                GreenTeamBox.className = "greenTeamList";
+                var GreenTeamList = document.createElement("ul");
+                GreenTeamBox.appendChild(GreenTeamList);
+            
+                var GoldTeamBox = document.createElement("div");
+                GoldTeamBox.className = "goldTeamList";
+                var GoldTeamList = document.createElement("ul");                
+                GoldTeamBox.appendChild(GoldTeamList);
+                
+                // first UL of each team list is the team name and it's score
+                var RedTeamHeader = document.createElement("li");
+                var BlueTeamHeader = document.createElement("li");
+                var GreenTeamHeader = document.createElement("li");
+                var GoldTeamHeader = document.createElement("li");
+                RedTeamHeader.className = "Scoreboard_RedTeamHeader";
+                BlueTeamHeader.className = "Scoreboard_BlueTeamHeader";
+                GreenTeamHeader.className = "Scoreboard_GreenTeamHeader";
+                GoldTeamHeader.className = "Scoreboard_GoldTeamHeader";
+                var RedTeamHeaderText = document.createTextNode("RED TEAM: " + RedScore);
+                var BlueTeamHeaderText = document.createTextNode("BLUE TEAM: " + BlueScore);
+                var GreenTeamHeaderText = document.createTextNode("GREEN TEAM: " + GreenScore);
+                var GoldTeamHeaderText = document.createTextNode("GOLD TEAM: " + GoldScore);
+                RedTeamHeader.appendChild(RedTeamHeaderText);
+                BlueTeamHeader.appendChild(BlueTeamHeaderText);
+                GreenTeamHeader.appendChild(GreenTeamHeaderText);
+                GoldTeamHeader.appendChild(GoldTeamHeaderText);
+                RedTeamList.appendChild(RedTeamHeader);
+                BlueTeamList.appendChild(BlueTeamHeader);
+                GreenTeamList.appendChild(GreenTeamHeader);
+                GoldTeamList.appendChild(GoldTeamHeader);
+            }
+            
+			Stats.Matches[i].Players.sort(function(a, b)
+			{
+				if (a.TeamIndex < b.TeamIndex)
+				{
+					return -1;
+				}
+				
+				if (a.TeamIndex > b.TeamIndex)
+				{
+					return 1;
+				}
+				
+				if (a.Score > b.Score)
+				{
+					return -1;
+				}
+				
+				if (a.Score < b.Score)
+				{
+					return 1;
+				}
+				
+				<!-- If matching score, use KD differential -->
+				if ((a.Kills - a.Deaths) > (b.Kills - b.Deaths))
+				{
+					return -1;
+				}
+				
+				if ((a.Kills - a.Deaths) < (b.Kills - b.Deaths))
+				{
+					return 1;
+				}
+				
+				return 0;
+			});
+	
+            // counters to check if there are any gold and green players in team games; 
+            var NumGoldPlayers = 0;
+            var NumGreenPlayers = 0;
+            var playerPlace = -1;
+            var playerScore = -999; // doubt you can be *that* unlucky;
+            var playerTeam;
+    
+            //  let's populate player's lists
+            
+            for (var PlayerIdx = 0; PlayerIdx < Stats.Matches[i].Players.length; PlayerIdx++)
+			{	
+				var PlayerName = document.createElement("li");
+                PlayerName.className = "Scoreboard_PlayerItem";
+				
+				// Make a link that opens up a new stats page if there's a StatsID, no StatsID implies bot
+				// One day bots will get a StatsID so they can get millions of kills
+				var textnode = document.createTextNode(Stats.Matches[i].Players[PlayerIdx].PlayerName);				
+				if (Stats.Matches[i].Players[PlayerIdx].StatsID.length > 0)
+				{
+					var StatsLink = document.createElement("a");
+					StatsLink.appendChild(textnode);
+					StatsLink.className = "Scoreboard_PlayerStatsLink";
+					var FunctionText = "openNewStatsPage('" + Stats.Matches[i].Players[PlayerIdx].StatsID + "')";
+					StatsLink.setAttribute("onClick", FunctionText);
+					PlayerName.appendChild(StatsLink);
+				}
+				else
+				{
+					PlayerName.appendChild(textnode);
+				}
+                
+                // highlight the player on the scoreboard with a different color
+                if (typeof Stats.Matches[i].Teams != 'undefined' && Stats.Matches[i].Players[PlayerIdx].StatsID == Stats.StatsID)
+				{   
+                    PlayerName.className = "Team" + Stats.Matches[i].Players[PlayerIdx].TeamIndex + "PlayerHighlight";
+                    playerTeam = Stats.Matches[i].Teams[Stats.Matches[i].Players[PlayerIdx].TeamIndex];
+                    
+                }
+                else if (Stats.Matches[i].Players[PlayerIdx].StatsID == Stats.StatsID){
+                    PlayerName.className = "DMPlayerHighlight";
+                    playerPlace = PlayerIdx+1;
+                    playerScore = Stats.Matches[i].Players[PlayerIdx].Score;
+                }
+                
+                
+				var PlayerStatNode = document.createElement("ul");
+                PlayerStatNode.className = "Scoreboard_PlayerStats"
+				
+				node = document.createElement("li");
+				textnode = document.createTextNode("Score: " + Stats.Matches[i].Players[PlayerIdx].Score);
+				node.appendChild(textnode);
+				PlayerStatNode.appendChild(node);
+				
+				node = document.createElement("li");
+				textnode = document.createTextNode("Kills: " + Stats.Matches[i].Players[PlayerIdx].Kills);
+				node.appendChild(textnode);
+				PlayerStatNode.appendChild(node);
+				
+				node = document.createElement("li");
+				textnode = document.createTextNode("Deaths: " + Stats.Matches[i].Players[PlayerIdx].Deaths);
+				node.appendChild(textnode);
+				PlayerStatNode.appendChild(node);
+				
+				if ("/Script/UnrealTournament.UTCTFGameMode" == Stats.Matches[i].GameType)
+				{
+					node = document.createElement("li");
+					textnode = document.createTextNode("Flag Captures: " + Stats.Matches[i].Players[PlayerIdx].FlagCaptures);
+					node.appendChild(textnode);
+					PlayerStatNode.appendChild(node);
+					
+					node = document.createElement("li");
+					textnode = document.createTextNode("Flag Returns: " + Stats.Matches[i].Players[PlayerIdx].FlagReturns);
+					node.appendChild(textnode);
+					PlayerStatNode.appendChild(node);
+				}
+                
+				
+                // if a team game, check what team player belongs to and attach the generated LI to the corresponding UL 
+                // had to do it like this, as we need two lists for separate styles, not a single one.
+				if (typeof Stats.Matches[i].Teams != 'undefined')
+				{
+                    if (Stats.Matches[i].Players[PlayerIdx].TeamIndex == 0){
+                        RedTeamList.appendChild(PlayerName);
+                        PlayerName.appendChild(PlayerStatNode);
+                    }
+                    if (Stats.Matches[i].Players[PlayerIdx].TeamIndex == 1){
+                        BlueTeamList.appendChild(PlayerName);
+                        PlayerName.appendChild(PlayerStatNode);
+                    }
+                    if (Stats.Matches[i].Players[PlayerIdx].TeamIndex == 2){
+                        GreenTeamList.appendChild(PlayerName);
+                        PlayerName.appendChild(PlayerStatNode);
+                        NumGreenPlayers = NumGreenPlayers + 1;
+                    }
+                    if (Stats.Matches[i].Players[PlayerIdx].TeamIndex == 3){
+                        GoldTeamList.appendChild(PlayerName);
+                        PlayerName.appendChild(PlayerStatNode);
+                        NumGoldPlayers = NumGoldPlayers + 1;
+                    }
+                    PlayerListNode.style.display = "none";
+                    PlayerListNode.style.visibility = "hidden";
+				}
+                else{
+                    // not a team game, doing it the old way.
+                    PlayerListNode.appendChild(PlayerName);
+                    PlayerName.appendChild(PlayerStatNode);
+                }    
+                
+			}
+            
+            // if this is a team game, attach the player lists for participating teams
+            if (typeof Stats.Matches[i].Teams != 'undefined')
+			{
+                MatchData.appendChild(RedTeamBox);
+                MatchData.appendChild(BlueTeamBox);
+                if (NumGreenPlayers > 0){
+                  MatchData.appendChild(GreenTeamBox);
+                }
+                if (NumGoldPlayers > 0){
+                  MatchData.appendChild(GreenTeamBox);
+                }
+                
+            }
+            
+            // Provide the score for the match header for DM
+            
+            if (playerScore != -999 && playerPlace != -1){
+                var placetext = " " + playerPlace;
+                var numsuffix = placetext.charAt(placetext.length - 1);
+                
+                if (numsuffix == 1  && playerPlace != 11){
+                    numsuffix = "st";
+                }
+                else if (numsuffix == 2 && playerPlace != 12){
+                    numsuffix = "nd";
+                }
+                else if (numsuffix == 3 && playerPlace != 13){
+                    numsuffix = "rd";
+                }
+                else {
+                    numsuffix = "th";
+                }
+                
+                DMPlace.innerHTML = playerPlace + numsuffix + " place with " + playerScore + " points";
+				if (playerPlace == 1)
+					MatchHeader.className = "MatchHeaderWon";                
+            }
+            
+            // Change the team game matchheader color depending if the player won the game;
+                    
+            
+            if (typeof Stats.Matches[i].Teams != 'undefined'){
+                
+                 Stats.Matches[i].Teams.sort(function(a, b)
+			     {
+				    if (a.Score > b.Score)
+				    {
+					   return -1;
+				    }
+				
+				    if (a.Score < b.Score)
+				    {
+					   return 1;
+				    }
+                
+                    return 0;
+                });
+                
+                if (Stats.Matches[i].Teams[0] == playerTeam)
+                    MatchHeader.className = "MatchHeaderWon";
+                else
+                    MatchHeader.className = "MatchHeaderLost";
+                    
+            }
+			
+			
+            
+		}
+	}
+}
+
+
+	$( "#OverallStatHeader" ).click(function()
+	{
+		$("#OverallStatBoxContent").toggle();
+		$("#OverallStatCollapsed").toggle();
+    });
+	$( "#WeaponStatHeader" ).click(function()
+	{
+		$("#WeaponStatBoxContent").toggle();
+		$("#WeaponStatCollapsed").toggle();
+    });
+	$( "#MiscStatHeader" ).click(function()
+	{
+		$("#MiscStatBoxContent").toggle();
+		$("#MiscStatCollapsed").toggle();
+    });
+	$( "#MatchHistoryStatHeader" ).click(function()
+	{
+		$("#MatchHistoryStatBoxContent").toggle();
+		$("#MatchHistoryStatCollapsed").toggle();
+    });
+    $( "#matchHeaderMatch1" ).click(function()
+	{
+        $("#ExpandMatch1").toggle();
+        $("#CollapseMatch1").toggle();
+        $("#Match1").toggle();        
+    });
+        $( "#matchHeaderMatch2" ).click(function()
+	{
+        $("#ExpandMatch2").toggle();
+        $("#CollapseMatch2").toggle();
+		$("#Match2").toggle();
+    });
+        $( "#matchHeaderMatch3" ).click(function()
+	{
+        $("#ExpandMatch3").toggle();
+        $("#CollapseMatch3").toggle();
+		$("#Match3").toggle();
+    });
+        $( "#matchHeaderMatch4" ).click(function()
+	{
+        $("#ExpandMatch4").toggle();
+        $("#CollapseMatch4").toggle();
+		$("#Match4").toggle();
+    });
+        $( "#matchHeaderMatch5" ).click(function()
+	{
+        $("#ExpandMatch5").toggle();
+        $("#CollapseMatch5").toggle();
+		$("#Match5").toggle();
+    });
+	
+</script>
+
+</body>
+</html>
