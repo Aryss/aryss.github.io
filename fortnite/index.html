@@ -600,15 +600,16 @@
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        var day_txt = "days"
-        if (days = 1){
-            day_txt = "day";
+        var day_txt = "days";
+        if (days % 10 == 1)
+        { 
+            days_txt = " day ";
         }
-                
+            
         document.getElementById('date').innerHTML = days + ' ' + day_txt + ' ';
-        document.getElementById('date').innerHTML += hours + 'hrs ';
-        document.getElementById('date').innerHTML += minutes + 'mins ';
-        document.getElementById('date').innerHTML += seconds + 'secs';
+        document.getElementById('date').innerHTML += hours + 'h ';
+        document.getElementById('date').innerHTML += minutes + 'm ';
+        document.getElementById('date').innerHTML += seconds + 's';
     }
 
     timer = setInterval(showRemaining, 1000);
