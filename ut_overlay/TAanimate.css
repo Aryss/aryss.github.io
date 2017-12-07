@@ -1,0 +1,302 @@
+
+/*
+//=================================================================
+// In Twitchalerts Dashboard go to Alert Box under Stream Widgets on the left
+// 1. Set the alerts to text only (middle option)
+// 2. Enter this text into Message template on all tabs.
+// <div class="logo-div"><img src="http://i.imgur.com/QKwULrj.png" class="logo" / width="176px" height="176px"></div><div class="UW"><div class="Name">{name}</div></div><div class="DW"><div class="Msg">is now following</div></div><div class="bar"><img src="http://i.imgur.com/b5DJ1f9.png" /></div>
+// Edit the last bit as necessary for follow and subscribe messages
+// 3. Set the message Font to "Aldrich", font size to 50, weight to 600. Repeat this step on all tabs. This is important! If text and bar are misaligned, set this!
+// 4. Open OBS Studio and add a a new source to your scene: Browser source
+// 5. Copy the link from TwitchAlerts Alert Box page (at the top, under How To section) and paste it into the URL section.
+// 6. Set Width to 620, width to 400
+// 7. Paste the CSS below into CSS field and click OK
+// 8. Test the alerts using the test buttons on TwitchAlerts Alert Box page
+//
+// The widget was made with docking to the left side of the screen in mind, adjust the the commented line in #alert-user-message below if you want to dock it to place it on the center or on the right.
+//=================================================================
+
+
+*/
+  
+  body, #alert-box, #wrap, #alert-text-wrap{
+    height: 400px;
+    width: 600px;
+  }
+  
+  #alert-message, #alert-text{
+    text-align: left;
+    padding: 0px;
+  }
+  
+  #alert-text{
+    text-shadow: 0px 0px 1px #3e3e3f, 0px 0px 2px #3e3e3f, 0px 0px 3px #3e3e3f, 0px 0px 4px #3e3e3f;
+  }
+  
+  #alert-user-message{
+    transform: translateY(-180px);
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    animation-name: msgFadeIn !important;
+    animation-delay: 3s !important;
+    animation-timing-function: linear;
+  }
+  
+.logo{
+    animation-name: Urollout; 
+    animation-duration: 10s;
+  text-align: left;
+    animation-timing-function: linear;    
+}
+
+.logo-div{
+    height: 176px;
+    width: 600px;
+    text-align: center;
+    animation-name: Ustatic;
+    animation-duration: 10s;
+    animation-timing-function: linear;    
+    transform: scale(0,0);
+}
+
+.bar{
+    width: 500px;
+    text-align: right;
+    animation-name: bar; 
+    padding-left: 10px;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    transform:translate(110px, -90px) scale(1,0);
+    transform-origin: right;
+}
+
+.textName{
+    font-family: 'Aldrich', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px !important;
+    font-weight: 600 !important;
+    padding-left: 10px !important;
+    color: white;
+    text-align: justify !important;
+    width: 500px !important;
+    animation-name: textUp;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    transform-origin: bottom;
+    transform:translate(140px, -200px) scale(1,0);        
+}
+
+.textMsg{
+    font-family: 'Aldrich', sans-serif;
+    text-transform: uppercase;
+    text-align: left !important;
+    width: 500px !important;
+    color: white;
+    font-size: 36px !important;
+    font-weight: 500 !important;
+    padding-left: 10px !important;
+    animation-name: textDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;    
+    transform-origin: top;
+    transform:translate(140px, -127px) scale(1,0);      
+}
+  
+@keyframes msgFadeIn {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }  
+  98% {
+    opacity: 1;
+  }
+  100%  {
+    opacity: 0;
+  }
+}
+
+@keyframes Urollout {
+  from {
+    opacity: 0;
+    transform:translateY(-10px) rotate(720deg);
+  }
+ 10% {
+    opacity: 1;
+    transform:translateY(-10px) rotate(0deg);
+    }
+  15% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-15deg);
+  }
+  17% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(15deg);
+  }
+  18% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-15deg);
+  }
+  19% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(10deg);
+  }
+  20% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-5deg);      
+  }
+  21% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(0deg);      
+  }
+  79% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(0deg);
+  }
+  80% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-5deg);
+  }
+  81% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(5deg);
+  }
+  82% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-10deg);      
+  }
+  83% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(15deg);      
+  }     
+  85% {
+    opacity: 1;
+    transform:translate(-220px, -10px) rotate(-15deg);
+  }      
+  90% {
+  opacity: 1;
+    transform:translateY(-10px) rotate(5deg);  
+  }    
+  100% {
+  opacity: 0;
+  transform:translateY(-10px) rotate(800deg);
+  }    
+}
+
+@keyframes Ustatic {
+  from {
+  transform: scale(0.1);      
+  }
+ 10% {
+  transform: scale(1.0);
+  } 
+  90% {
+  transform: scale(1.0);
+  }    
+  100% {
+  transform: scale(0.1);      
+  }    
+}
+
+@keyframes bar {
+  from {
+    opacity: 0;
+    transform:translate(100px, -130px) scale(0,1);
+  }
+ 12% {
+    opacity: 0;
+    transform:translate(100px, -130px) scale(0,1); 
+    }
+  15% {
+    opacity: 1;
+    transform:translate(100px, -130px) scale(0.92,1);      
+  }
+  85% {
+    opacity: 1;
+    transform:translate(100px, -130px) scale(0.92,1); 
+  }      
+  88% {
+  opacity: 0;
+  transform:translate(100px, -130px) scale(0,1);    
+  }    
+  100% {
+  opacity: 0;
+  transform:translate(100px, -130px) scale(0,1);   
+  }    
+}
+
+
+@keyframes textUp {
+  from {
+    opacity: 0;
+    transform:translate(140px, -210px) scale(1,0);       
+  }
+ 12% {
+    opacity: 0;
+     transform:translate(140px, -210px) scale(1,0);   
+    }
+  15% {
+    opacity: 1;
+    transform:translate(140px, -210px) scale(1,0);   
+  }
+  18% {
+    opacity: 1;
+    transform:translate(140px, -210px) scale(1,1.2);   
+  }
+  82% {
+    opacity: 1;
+    transform:translate(140px, -210px) scale(1,1.2);   
+  }     
+  85% {
+    opacity: 1;
+    transform:translate(140px, -210px) scale(1,0);   
+  }      
+  88% {
+  opacity: 0;
+   transform:translate(140px, -210px) scale(1,0);   
+  }    
+  100% {
+  opacity: 0;
+   transform:translate(140px, -210px) scale(1,0);   
+  }    
+}
+
+@keyframes textDown {
+  from {
+    opacity: 0;
+    transform:translate(140px, -197px) scale(1,0);       
+  }
+ 12% {
+    opacity: 0;
+     transform:translate(140px, -197px) scale(1,0);   
+    }
+  15% {
+    opacity: 1;
+    transform:translate(140px, -197px) scale(1,0);   
+  }
+  18% {
+    opacity: 1;
+    transform:translate(140px, -197px) scale(1,1);   
+  }
+  82% {
+    opacity: 1;
+    transform:translate(140px, -197px) scale(1,1);   
+  }     
+  85% {
+    opacity: 1;
+    transform:translate(140px, -197px) scale(1,0);   
+  }      
+  88% {
+  opacity: 0;
+   transform:translate(140px, -197px) scale(1,0);   
+  }    
+  100% {
+  opacity: 0;
+   transform:translate(140px, -197px) scale(1,0);   
+ }    
+}

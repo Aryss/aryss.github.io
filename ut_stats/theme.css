@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+body,td,th {
+	font-family: "Open Sans", Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: #000000;
+    margin: 0px;
+}
+body {
+	background-color: #DFDFDF;
+}
+
+a:link {
+	color: #3274E2;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #599DC8;
+}
+a:hover {
+	text-decoration: underline;
+	color: #B9B9B9;
+}
+a:active {
+	text-decoration: none;
+	color: #BFF2FF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: #fff;
+background-color: #272727;
+font-family: "Roboto Condensed";
+margin-top: 0px;
+margin-bottom: 6px;
+padding-bottom: 4px;
+padding-top: 4px;
+text-align: center;
+font-weight: normal;
+/* text-transform: uppercase; */
+}
+
+.PageHeader{
+    background-color: #000000;
+    width: 100%;
+    height: 58px;
+    align-content: flex-start;
+    vertical-align: top;
+    margin-top: 0px;
+}
+
+.logo {
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 30px;
+  margin-top: 8px;
+  display: inline;
+  float: left;
+}
+
+.mainheader{
+    background-color: #000000;
+    display: inline;
+    padding-left: 15px;
+    font-family: "Roboto Condensed";
+    float: left;
+    margin-top: 7px;
+    font-size: 28px;
+    text-transform: none;      
+}
+
+.StatBoxHeader{
+    font-family: "Roboto Condensed";
+    text-transform: uppercase; 
+    font-weight: 500;
+}
+
+
+.StatBox
+{
+background-color: #bcbcbc;
+padding: 0px 0px 10px 0px;
+margin-top: 6px;
+margin-bottom: 25px;
+margin-left: auto;
+margin-right: auto;
+min-width: 358px;
+text-align: center;
+width:94%;
+-webkit-box-shadow: 0px 0px 5px 1px rgba(56,56,56,1);
+-moz-box-shadow: 0px 0px 5px 1px rgba(56,56,56,1);
+box-shadow: 0px 0px 5px 1px rgba(56,56,56,1);
+}
+
+.SubStatBox
+{
+background-color: #a3a3a3;
+padding: 0px;
+margin-top: 6px;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 6px;
+display: inline-block;
+min-width: 358px;
+vertical-align:top;
+text-align: left;
+}
+
+.WeaponBox
+{
+width: 358px;
+min-height: 200px;
+background-color: #a3a3a3;
+padding: 0px;
+margin-top: 6px;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 6px;
+display: inline-block;
+vertical-align:top;
+text-align: left;
+}
+
+.DiagramBox
+{
+width: 500px;
+min-height: 300px;
+background-color: #a3a3a3;
+padding: 0px;
+margin-top: 6px;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 6px;
+display: inline-block;
+vertical-align:top;
+text-align: left;
+}
+
+#killchart {
+    min-height: 300px;
+}
+
+#deathchart {
+    min-height: 300px;
+}
+
+.WeaponStatHeader{
+ text-transform: uppercase;
+ padding-top: 6px;
+}
+
+.WeaponStatHeader img{
+    margin-right: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.MatchBox
+{
+width: 95%;
+min-height: 25px;
+background-color: #a3a3a3;
+padding: 0px;
+margin-top: 0px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 3px;
+display: inline-block;
+vertical-align:top;
+text-align: left;
+}
+
+.matchLink{
+    width: 100%;
+}
+
+.matchHeader{
+    color: #ffffff !important;
+    background-color: #272727;
+    font-family: "Open Sans";
+    min-height: 25px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin: 0px;
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+
+.MatchHeaderWon{
+    color: #ffffff !important;
+    background-color: #02A05B;
+    font-family: "Open Sans";
+    min-height: 25px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin: 0px;
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+.MatchHeaderLost{
+    color: #ffffff !important;
+    min-height: 25px;
+    background-color: #F05D66;
+    font-family: "Open Sans";
+    min-height: 25px;
+    margin-bottom: 0px;
+    text-align: left;
+    margin: 0px;
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+.MatchExpandIcon{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.MatchCollapseIcon{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.matchNumber{
+    width: 100px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.MatchData{
+    text-align: center;
+}
+
+.matchGameType{
+    width: 500px;
+    display: inline-block;
+}
+
+.matchScore{
+    width: 250px;
+    display: inline-block;
+    padding-left: 20%;
+}
+
+/* 
+
+// TEAM SCOREBOARD ELEMENTS FOR THE RED TEAM
+
+*/
+
+.redTeamList{
+    display: inline-block;
+    vertical-align:top;
+    min-width: 25%;
+    max-width: 50%;
+    padding: 0px;
+}
+
+.Scoreboard_RedTeamHeader{
+    list-style-type: none;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #E86870 !important;
+    padding: 0px;
+}
+
+.redTeamList ul{
+    padding: 0px;
+}
+
+.redTeamList li{
+    
+    padding: 0px;
+}
+
+.redTeamList li:nth-child(odd){
+    background-color: #F5D5D5;
+}
+
+.redTeamList li:nth-child(even){
+    background-color: #F2BFBF;
+}
+
+.Team0PlayerHighlight{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px !important;
+    background-color: #F28888 !important;
+}
+
+/* 
+
+// TEAM SCOREBOARD ELEMENTS FOR THE BLUE TEAM
+
+*/
+
+.Scoreboard_BlueTeamHeader{
+    list-style-type: none;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #306CCB !important;
+    padding: 0px;
+}
+
+.blueTeamList {
+    display: inline-block;
+    vertical-align:top;
+    min-width: 25%;
+    max-width: 50%;
+    padding: 0px;
+}
+
+.blueTeamList ul{
+    padding: 0px;
+}
+
+.blueTeamList li{
+    padding: 0px;
+}
+
+.blueTeamList li:nth-child(odd){
+    background-color: #D5E1F5;
+}
+
+.blueTeamList li:nth-child(even){
+    background-color: #BFD3F2;
+}
+
+.Team1PlayerHighlight{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px !important;
+    background-color: #8889F2 !important;
+}
+    
+/* 
+//
+// TODO: Add proper support for the Gold and Green teams;
+// 
+*/
+
+.goldTeamList{
+    display: inline-block;
+    vertical-align:top;
+    min-width: 25%;
+    padding: 0px;
+}
+.greenTeamList{
+    display: inline-block;
+    vertical-align:top;
+    min-width: 25%;    
+    padding: 0px;
+}
+
+.Scoreboard_GreenTeamHeader{
+    list-style-type: none;
+    padding: 0px;
+}
+.Scoreboard_GoldTeamHeader{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+/* 
+
+// SCOREBOARD ELEMENTS FOR THE DM GAME MODES
+
+*/
+
+.Scoreboard_DMPlayerList{
+    display: inline-block;
+    align-content: stretch;
+    vertical-align:top;
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 40px;
+    padding: 0px;
+    background-color: #bcbcbc;
+}
+
+.Scoreboard_PlayerItem{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px !important;
+}
+
+.Scoreboard_PlayerStats li{
+    font-size: 16px;
+    font-weight: 400;
+    display:inline-block;
+    list-style-type: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent !important;
+}
+
+.Scoreboard_PlayerStatsLink{
+	text-decoration: underline;
+}
+.Scoreboard_DMPlayerList li:nth-child(odd){
+    background-color: #bcbcbc;
+}
+
+.Scoreboard_DMPlayerList li:nth-child(even){
+    background-color: #cdcdcd;
+}
+
+.DMPlayerHighlight{
+    list-style-type: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px !important;
+    background-color: #ababab !important;   
+}
+
+.CollapsedIndicator
+{
+    display:none;
+}
+
+}

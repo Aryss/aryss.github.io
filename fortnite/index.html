@@ -1,0 +1,619 @@
+<html>
+    <head>
+        <style>
+            
+            /** animation **/
+        @font-face {
+        font-family: "BurbankBigCondensed-Black";
+        src: url("https://cdn1.unrealengine.com/Fortnite/3496674/bb07d1cd69c15282918094a4af2afacd-bb07d1cd69c15282918094a4af2afacd.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal; }
+        
+    @font-face { 
+        font-family: "BurbankSmall-Black"; 
+        font-style: normal; 
+        font-weight: 400; 
+        font-stretch: normal; 
+        src: url("https://cdn1.unrealengine.com/Fortnite/3496674/bb07d1cd69c15282918094a4af2afacd-bb07d1cd69c15282918094a4af2afacd.woff") format("woff"); 
+    }        
+            
+            @keyframes RayBob{
+                 0% {top: 100px;}
+                 100% {top: 70px;}
+            }        
+            
+            @keyframes lens{
+                 0% {top: -1055px; left: 100px;}
+                 50% {top: -1055px; left: 85px;}
+                100% {top: -1055px; left: 100px;}
+            }
+            
+            @keyframes lshoulder{
+                0% {transform-origin: right; transform: rotate(-10deg) scale(1, 0.9);}
+                100% {transform-origin: right; transform: rotate(5deg)  scale(1, 0.9);}
+            }
+            
+             @keyframes rshoulder{
+                0% { transform: rotate(0deg); transform-origin: top left; }
+                100% {transform: rotate(-15deg); transform-origin: top left; }
+            }
+            
+              @keyframes lforearm{
+                0% {transform: translateX(4px)  translateY(-2px) rotate(0deg); transform-origin: top;}
+                100% {transform: translateX(4px) translateY(-15px) rotate(-3deg); transform-origin: top;}
+            }
+            
+             @keyframes rforearm{
+                0% {transform: translateX(-0px)  translateY(-6px) rotate(0deg); transform-origin: top left;}
+                100% {transform: translateX(12px) translateY(-20px) rotate(5deg); transform-origin: top left;}
+             }
+            @keyframes larm{
+                0% {transform: translateX(-20px)  translateY(-5px) rotate(0deg) scale(0.8, 0.8); transform-origin: left;}
+                100% {transform: translateX(-20px) translateY(-5px) rotate(-15deg) scale(0.8, 0.8); transform-origin: left;}
+             }
+             @keyframes rarm{
+                0% {transform: translateX(-20px)  translateY(-5px) rotate(0deg) scale(0.8, 0.7); transform-origin: right;}
+                100% {transform: translateX(-15px) translateY(-15px) rotate(15deg) scale(0.8, 0.7); transform-origin: right;}
+             }
+            @keyframes lhand{
+                0% {transform: translateX(50px)  translateY(10px) rotate(-5deg); transform-origin: middle;}
+                100% {transform: translateX(130px) translateY(-30px) rotate(-15deg); transform-origin: middle;}
+             }
+             @keyframes rhand{
+                0% {transform: translateX(0px)  translateY(25px) rotate(0deg); transform-origin: middle;}
+                100% {transform: translateX(-150px) translateY(-25px) rotate(8deg); transform-origin: middle;}
+             }
+            @keyframes lthumb{
+                0% {transform:  translateX(42px)  translateY(17px) rotate(0deg) scale(0.7, 0.9); transform-origin: middle;}
+                100% {transform:  translateX(42px)  translateY(17px) rotate(5deg) scale(0.7, 0.9); transform-origin: middle;}
+             }
+            @keyframes lfinger{
+                0% {transform:  translateX(5px)  rotate(10deg) scale(0.9, 0.8); transform-origin: middle;}
+                100% {transform:  translateX(5px)  rotate(15deg) scale(0.9, 0.8); transform-origin: middle;}
+             }
+            @keyframes lpinky{
+                0% {transform:  translateX(-5px)  translateY(0px) rotate(-15deg) scale(0.9, 0.7); transform-origin: middle;}
+                100% {transform:  translateX(-5px)  translateY(0px) rotate(-20deg) scale(0.9, 0.7); transform-origin: middle;}
+             }            
+             @keyframes rthumb{
+                0% {transform: translateX(-6px)  translateY(-8px) rotate(-12deg) scale(0.9, 0.7); transform-origin: middle;}
+                100% {transform: translateX(-6px) translateY(-8px) rotate(-20deg) scale(0.9, 0.7); transform-origin: middle;}
+             }
+             @keyframes rfinger{
+                0% {transform: translateX(-8px)  translateY(8px) rotate(-5deg) scale(0.9, 0.7); transform-origin: middle;}
+                100% {transform: translateX(-8px) translateY(8px) rotate(-15deg) scale(0.9, 0.7); transform-origin: middle;}
+             }
+            @keyframes rpinky{
+                0% {transform: translateX(0px)  translateY(6px) rotate(10deg) scale(0.9, 0.7); transform-origin: middle;}
+                100% {transform: translateX(0px) translateY(6px) rotate(0deg) scale(0.9, 0.7); transform-origin: middle;}
+             }            
+            
+            /* text animations */
+            
+            @keyframes bubble{
+                0% {opacity: 0;}
+                16% {opacity: 0; scale(0.9, 0.5) rotate(-7deg);}
+                17% {opacity: 1; scale(1, 1) rotate(0deg);}
+             }
+            
+            /* bubble animations */
+            
+            @keyframes message{
+                0% {transform: matrix3d(1.00865, 0.00826103, 0, 0.0000333639, -0.0247636, 1.02896, 0, -0.0000674535, 0, 0, 1, 0, 1.96896, -2.86909, 0, 1)}
+                17% {transform: matrix3d(0.947767, -0.0105334, 0, -0.000146501, 0.00916747, 0.975547, 0, -0.0000558601, 0, 0, 1, 0, -1.22777, 1.33871, 0, 1)}
+                25% {transform: matrix3d(1.0, 0.00826103, 0, 0.0000336, -0.0347636, 1.04896, 0, -0.0000674535, 0, 0, 1, 0, 1.96896, -2.86909, 0, 1);} 
+                40% {transform: matrix3d(0.947767, -0.0105334, 0, -0.000146501, 0.00916747, 0.975547, 0, -0.0000558601, 0, 0, 1, 0, -1.22777, 1.33871, 0, 1);}
+                45% {transform: matrix3d(0.995287, -0.00635459, 0, 0.0000203614, 0.0731139, 0.970997, 0, 0.0000301525, 0, 0, 1, 0, -1.99893, 2.89665, 0, 1);}
+                60% {transform: matrix3d(0.927698, -0.0162008, 0, -0.000229299, 0.0157522, 0.994289, 0, 0.00013223, 0, 0, 1, 0, 1.54169, 2.88273, 0, 1)}
+                75% {transform: matrix3d(1.04065, 0.000788913, 0, 0.000107995, -0.018615, 0.97009, 0, 0.0000576965, 0, 0, 1, 0, 1.99872, 2.8041, 0, 1)}
+                83% {transform: matrix3d(0.947767, -0.0105334, 0, -0.000146501, 0.00916747, 0.975547, 0, -0.0000558601, 0, 0, 1, 0, -1.22777, 1.33871, 0, 1)}
+                100% {transform: matrix3d(0.98808, -0.00843938, 0, -0.00000447064, 0.0406035, 0.964152, 0, -0.0000327176, 0, 0, 1, 0, -1.96127, 2.46414, 0, 1)}
+             }
+
+            
+            /** RAY appearance **/
+            
+            @keyframes appear{
+                0% {opacity: 0.5;  top: 300px; left: -860px; transform: rotate(30deg);}
+                10% {left: -860px; top: 450px; transform: rotate(30deg);}
+                11% {opacity: 0.5;}
+                12% {opacity: 1;}
+                15% {top: 0px; left: 0px; transform: rotate(0deg);}                
+            }
+
+            
+            body {
+            background-image: url(countdown-bg.jpg);
+            background-size: cover;
+            overflow: hidden;
+            padding-top: 20vh;
+            padding-left: 10%;
+            }
+
+            /** RAY body **/
+            
+            .appear{
+                position: relative;
+                animation: appear;
+                animation-duration: 30s;
+                animation-iteration-count: 1;
+            }
+            
+            .ray{
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                animation: RayBob;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+            }
+     
+            .body{
+                position: relative;
+                width: 200px;
+                height: 280px;
+                top: -20px;
+                left: 5px;
+                transform: scale(0.9, 0.8);
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            
+            /** Left hand **/
+            
+            .lshoulder{
+                position: relative;
+                top: -171px;
+                left: -15px;
+                width: 70px;
+                height: 65px;
+                background-position: 220px 136px;
+                animation: lshoulder;
+                animation-duration: 1s;
+                animation-delay: 0.7s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;  
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .lforearm{
+                position: relative;
+                top: -200px;
+                left: -70px;
+                width: 85px;
+                height: 130px;
+                transform-origin: top;
+                transform: scale(1.0, 1.0);
+                background-position: 0px 215px;
+                animation: lforearm;
+                animation-duration: 1s;
+                animation-delay: 0.7s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .larm{
+                position: relative;
+                top: -250px;
+                left: -30px;
+                width: 90px;
+                height: 90px;
+                transform-origin: top;
+                transform: scale(0.8, 0.8);
+                background-position: 100px 90px;
+                animation: larm;
+                animation-duration: 1s;
+                animation-delay: 0.8s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            } 
+            .lhand{
+                position: relative;
+                top: -20px;
+                left: 10px;
+                width: 50px;
+                animation: lhand;
+                animation-duration: 1s;
+                animation-delay: 0.8s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+            }
+            .lpalm{
+                position: relative;
+                top: -535px;
+                left: -20px;
+                width: 90px;
+                height: 105px;
+                transform-origin: top;
+                transform: scale(0.9, 0.9);
+                background-position: 325px 215px;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }         
+            .lthumb{
+                position: relative;
+                top: -648px;
+                left: -12px;
+                width: 90px;
+                height: 80px;
+                transform-origin: top left;
+                background-position: 150px 215px;
+                animation: lthumb;
+                animation-duration: 1s;
+                animation-delay: 0.2s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .lfinger{
+                position: relative;
+                top: -701px;
+                left: -3px;
+                width: 75px;
+                height: 60px;
+                transform-origin: top;
+                background-position: 410px 75px;
+                animation: lfinger;
+                animation-duration: 1s;
+                animation-delay: 0.2s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;                     
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }    
+            .lpinky{
+                position: relative;
+                top: -730px;
+                left: -5px;
+                width: 75px;
+                height: 70px;
+                transform-origin: top;
+                background-position: 220px 215px;
+                animation: lpinky;
+                animation-duration: 1s;
+                animation-delay: 0.2s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            
+            /** Right hand **/
+            
+            .rshoulder{
+                position: relative;
+                top: -1070px;
+                z-index: -10;
+                left: 170px;
+                width: 70px;
+                height: 65px;
+                background-position: 80px 410px;
+                animation: rshoulder;
+                animation-duration: 1s;
+                animation-delay: 0.7s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .rforearm{
+                position: relative;
+                top: -1100px;
+                left: 170px;
+                width: 85px;
+                height: 130px;
+                transform-origin: top;
+                transform: scale(1.0, 1.0);
+                background-position: 80px 330px;
+                animation: rforearm;
+                animation-duration: 1s;
+                animation-delay: 0.7s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .rarm{
+                position: relative;
+                top: -1140px;
+                left: 160px;
+                width: 60px;
+                height: 60px;
+                transform-origin: top;
+                background-position: 170px 280px;
+                animation: rarm;
+                animation-duration: 1s;
+                animation-delay: 0.8s;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);                
+            } 
+            .rhand{
+                position: relative;
+                top: -60px;
+                height: 100px;
+                width: 100px;
+                animation: rhand;
+                animation-duration: 1s;
+                animation-delay: 0.8s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .rpalm{
+                position: relative;
+                top: -1180px;
+                left: 145px;
+                width: 90px;
+                height: 115px;
+                transform-origin: top;
+                transform: scale(0.9, 0.9);
+                background-position: 415px 225px;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }         
+            .rthumb{
+                position: relative;
+                top: -1284px;
+                left: 120px;
+                width: 90px;
+                height: 80px;
+                transform-origin: top left;
+                background-position: 325px 105px;
+                animation: rthumb;
+                animation-duration: 1s;
+                animation-delay: 0.25s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .rfinger{
+                position: relative;
+                top: -1345px;
+                left: 145px;
+                width: 75px;
+                height: 60px;
+                transform-origin: top;
+                background-position: 315px 285px;
+                z-index: 10;
+     /**           animation: rfinger; **/
+                transform: translateX(0px) translateY(10px) rotate(-10deg)  scale(0.9, 0.7);
+                animation-duration: 1s;
+                animation-delay: 0.25s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }    
+            .rpinky{
+                position: relative;
+                top: -1375px;
+                left: 135px;
+                width: 75px;
+                height: 70px;
+                transform-origin: top;
+                background-position: 240px 285px;
+/**                animation: rpinky; **/
+                transform: translateX(5px) translateY(0px) rotate(10deg)  scale(0.9, 0.7);
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+                transform-origin: top;
+                animation-iteration-count: infinite;                
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }          
+            .hood{
+                position: relative;
+                top: -595px;
+                left: 15px;
+                width: 210px;
+                height: 220px;
+                transform: scale(0.9, 0.8);
+                background-position: 300px 0px;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }  
+            .lens{
+                position: relative;
+                top: 450px;
+                left: 605px;
+                width: 90px;
+                height: 90px;
+                background-position: 85px 0px;
+                animation: lens;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                background-image: url(https://aryss.github.io/icons/ray-atlas.png);
+            }
+            .bubble{
+                position: relative;
+                animation: bubble;
+                animation-duration: 30s;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+            }
+            
+            .message{
+                position: absolute;
+                top: 210px;
+                left: 100px;
+                transform-origin: 0px 0px 0px;
+                transform: matrix3d(0.98808, -0.00843938, 0, -0.00000447064, 0.0406035, 0.964152, 0, -0.0000327176, 0, 0, 1, 0, -1.96127, 2.46414, 0, 1);
+                opacity: 1;
+                animation: message;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }             
+            .m-body{
+                position: relative;
+                background-color: #24A295;
+                font-family: 'Open Sans';
+                font-size: 30px;
+                color: #FFF;
+                top: -140px;
+                left: 60px;
+                width: 450px;
+                height: 130px;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+            }             
+            .m-anchor{
+                position: relative;
+                top: -60px;
+                left: 80px;
+                width: 256px;
+                height: 256px;
+                background-image: url(https://aryss.github.io/icons/lightning.png);
+                transform-origin: center;
+                transform: scale(0.7, -0.7);
+            } 
+            .m-alert{
+                color: white;
+                font-family:  'BurbankBigCondensed-Black';
+                font-size: 36px;
+                position: relative;
+                text-align: center;
+                top: -293px; 
+                left: 80px; 
+                width: 450px;
+                height: 90px;
+                line-height: 45px;
+                
+                animation: m-alert;
+                animation-duration: 30s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            
+            .disclaimer{
+                position: absolute;
+                left: 0px;
+                font-family: sans-serif;
+                font-size: 14px;
+                color: #FFF;
+                margin-bottom: 0px;
+                text-align: center;
+                margin-top: 75vh;
+                text-shadow: 1px 2px 3px #666;
+                width: 100vw;
+            }
+        </style>
+ <title>Fortnite Early Access Countdown</title>
+            <meta name="description"  content="Is it time to fight the storm yet?">
+    <meta data-react-helmet="true" property="og:title" content="Fortnite Early Access Countdown" />
+    <meta data-react-helmet="true" property="og:description" content="Is it time to fight the storm yet?" />
+    <meta data-react-helmet="true" property="og:site_name" content="Fortnite Early Access Countdown"/>
+    <meta data-react-helmet="true" property="og:url"             content="https://aryss.github.io/fortnite/" />
+    <meta data-react-helmet="true" property="og:image" content="https://aryss.github.io/fortnite/preview.jpg" /> 
+    <meta data-react-helmet="true" name="twitter:card" content="summary">
+    <meta data-react-helmet="true" name="twitter:site" content="@Aryss_SkaHara">
+    <meta data-react-helmet="true" name="twitter:title" content="Fortnite Early Access Countdown">
+    <meta data-react-helmet="true" name="twitter:description" content="Is it time to fight the storm yet?">
+    <meta data-react-helmet="true" name="twitter:image" content="https://aryss.github.io/fortnite/preview.jpg">
+    </head>
+    <body>
+        <div class=appear>
+        <div class=movement>
+        <!-- RAY-->
+        <div class="ray">
+                <!-- RAY body parts-->
+                <div class="body"></div>
+                <div class="lshoulder"></div>
+                <div class="lforearm"></div>
+                <div class="larm"></div>            
+                <div class="hood"></div>
+                <div class="lhand">
+                    <div class="lpalm"></div>
+                    <div class="lthumb"></div>
+                    <div class="lfinger"></div>    
+                    <div class="lpinky"></div>
+                </div>
+                <div class="lens"></div>               
+                <div class="rshoulder"></div>
+                <div class="rforearm"></div>
+                <div class="rarm"></div>
+                <div class="rhand">
+                    <div class="rpalm"></div>
+                    <div class="rthumb"></div>
+                    <div class="rfinger"></div>    
+                    <div class="rpinky"></div>
+                </div>
+                <!-- RAY parts end-->
+        </div>
+        <div class="message"><div class=bubble>
+            <div class="m-anchor"></div>
+            <div class="m-body"></div>
+            <div class="m-alert" id=text>It's just <span id=date></span> until we can finally fight the storm, Commander!</div>
+            </div></div>
+
+        </div>
+        </div>
+        
+         <script>
+    
+  
+    var lang;
+            if (window.navigator.languages) {
+                lang = window.navigator.languages[0];
+            } else {
+                lang = window.navigator.userLanguage || window.navigator.language;
+            }        
+        
+    var eadate = new Date('7/20/2017 10:00:00 AM EDT');        
+             
+             
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = eadate - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('date').innerHTML = 'What are you waiting for, Commander? It\'s time to take the fight to the storm!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        var day_txt = "days";
+        if (days % 10 == 1)
+        { 
+            day_txt = "day";
+        }
+            
+        document.getElementById('date').innerHTML = days + ' ' + day_txt + ' ';
+        document.getElementById('date').innerHTML += hours + 'h ';
+        document.getElementById('date').innerHTML += minutes + 'm ';
+        document.getElementById('date').innerHTML += seconds + 's';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+    </script>
+        <div class="disclaimer">Portions of the materials used are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic. CSS + Animation code © 2017 Michael "_Lynx" Sokolkov</div>
+    </body>
+</html>

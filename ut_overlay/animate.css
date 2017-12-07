@@ -1,0 +1,234 @@
+@charset "UTF-8";
+body{
+    margin: 0px;
+}
+
+.logo{
+    height: 176;
+    width: 176;
+    animation-name: Urollout; 
+    animation-duration: 10s;
+    animation-timing-function: linear;    
+    animation-iteration-count: infinite;
+}
+
+.logo-div{
+    height: 176px;
+    width: 600px;
+    text-align: center;
+    animation-name: Ustatic;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+     transform: scale(0,0);
+}
+
+.bar{
+    width: 500;
+    text-align: right;
+    animation-name: bar; 
+    padding-left: 10px;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform:translate(110px, -90px) scale(1,0);
+    transform-origin: right;
+}
+
+#bar{
+    color: #550000;
+    width: 512px;
+    height: 8px;
+}
+
+.UW{
+position: absolute;
+overflow: hidden;
+height: 67px;
+width: 500px;
+top: 30px;
+left: 140px;     
+}
+
+.Name{
+    font-family: 'Aldrich', sans-serif;
+    text-transform: uppercase;
+    font-size: 50;
+    font-weight: 600;
+    padding-left: 12px;
+    padding-top: 4px;
+    color: white;
+    text-align: justify;
+    position: relative;
+    width: 500px;
+    animation-name: textUp;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform:scale(1,1.2); 
+    overflow: hidden;
+}
+
+.DW{
+position: absolute;
+overflow: hidden;
+height: 164px;
+width: 470px;
+top: 98px;
+left: 140px;    
+}
+
+.Msg{
+    font-family: 'Aldrich', sans-serif;
+    text-transform: uppercase;
+    text-align: justify;
+    position: relative;
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    padding-left: 12px;
+    padding-top: 8px;
+    animation-name: textDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Urollout {
+ from { opacity: 0; }
+ 10% { opacity: 1; transform: rotate(-1080deg);}
+ 15% { opacity: 1; transform:translateX(-230px) rotate(-15deg);}
+ 17% { opacity: 1; transform:translateX(-230px) rotate(15deg);}
+ 18% { opacity: 1; transform:translateX(-230px) rotate(-15deg);}
+ 19% { opacity: 1; transform:translateX(-230px) rotate(10deg);}
+ 20% { opacity: 1; transform:translateX(-230px) rotate(-5deg);}
+ 21% { opacity: 1; transform:translateX(-230px) rotate(0deg);}
+ 79% { opacity: 1; transform:translateX(-230px) rotate(0deg);}
+ 80% { opacity: 1; transform:translateX(-230px) rotate(-5deg);}
+ 81% { opacity: 1; transform:translateX(-230px) rotate(5deg);}
+ 82% { opacity: 1; transform:translateX(-230px) rotate(10deg);}
+ 83% { opacity: 1; transform:translateX(-230px) rotate(-15deg);}     
+ 85% { opacity: 1; transform:translateX(-230px) rotate(15deg);}      
+ 90% { opacity: 1; transform: rotate(-1080deg);}    
+ 100% { opacity: 0;}    
+}
+
+@keyframes Ustatic {
+ from { transform: scale(0.1);}
+ 10% { transform: scale(1.0);} 
+ 90% { transform: scale(1.0);}    
+ 100% { transform: scale(0.1);}    
+}
+
+@keyframes bar {
+ from { opacity: 0; transform:translate(100px, -80px) scale(0,1);}
+ 12% { opacity: 0; transform:translate(100px, -80px) scale(0,1);}
+ 15% { opacity: 1; transform:translate(100px, -80px) scale(0.92,1);}
+ 85% { opacity: 1; transform:translate(100px, -80px) scale(0.92,1);}      
+ 88% { opacity: 0; transform:translate(100px, -80px) scale(0,1);}    
+ 100% { opacity: 0; transform:translate(100px, -80px) scale(0,1);}    
+}
+
+
+@keyframes textUp {
+   from {opacity: 0;top: 240px;}
+   16% {opacity: 0;top: 240px;}
+   19% {opacity: 1;top: 0;}
+   81% {opacity: 1;top: 0;}
+   84% {opacity: 0;top: 240px;}    
+  100% {opacity: 0;top: 240px;}
+  
+/*
+     from {
+    opacity: 0;
+    transform:translate(140px, -145px) scale(1,0);       
+  }
+ 12% {
+    opacity: 0;
+     transform:translate(140px, -145px) scale(1,0);   
+    }
+  15% {
+    opacity: 1;
+    transform:translate(140px, -145px) scale(1,0);   
+  }
+  18% {
+    opacity: 1;
+    transform:translate(140px, -145px) scale(1,1.2);   
+  }
+  82% {
+    opacity: 1;
+    transform:translate(140px, -145px) scale(1,1.2);   
+  }     
+  85% {
+    opacity: 1;
+    transform:translate(140px, -145px) scale(1,0);   
+  }      
+  88% {
+  opacity: 0;
+   transform:translate(140px, -145px) scale(1,0);   
+  }    
+  100% {
+  opacity: 0;
+   transform:translate(140px, -145px) scale(1,0);   
+  }    */
+}
+
+@keyframes textDown {
+    from {
+    opacity: 0;
+    top: -200;
+    }
+    16% {
+    opacity: 0;
+    top: -200
+    }
+   19% {
+    opacity: 1;
+    top: 0px;
+  }
+  81% {
+    opacity: 1;
+    top: 0px;
+  }
+   84% {
+    opacity: 0;
+    top: -200;
+  }    
+  100% {
+  opacity: 0;
+  top: -200;
+  }    
+    
+/*  from {
+    opacity: 0;
+    transform:translate(140px, -132px) scale(1,0);       
+  }
+ 12% {
+    opacity: 0;
+     transform:translate(140px, -132px) scale(1,0);   
+    }
+  15% {
+    opacity: 1;
+    transform:translate(140px, -132px) scale(1,0);   
+  }
+  18% {
+    opacity: 1;
+    transform:translate(140px, -132px) scale(1,1);   
+  }
+  82% {
+    opacity: 1;
+    transform:translate(140px, -132px) scale(1,1);   
+  }     
+  85% {
+    opacity: 1;
+    transform:translate(140px, -132px) scale(1,0);   
+  }      
+  88% {
+  opacity: 0;
+   transform:translate(140px, -132px) scale(1,0);   
+  }    
+  100% {
+  opacity: 0;
+   transform:translate(140px, -132px) scale(1,0);   
+  }    */
+}
