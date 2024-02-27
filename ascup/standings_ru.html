@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--  <meta http-equiv="refresh" content="2">-->
+  <title>Scores</title>
+  <style>
+    body {
+      margin: 10px;
+      overflow: hidden;
+      color: #fff;
+      font-size: 29px;
+      font-family: "Bahnschrift", Calibri, Arial, sans-serif;
+      background-image: url("table_bg2k4.jpg");
+    }
+    
+    .standings{
+        color: #000;
+        font-weight: 400;
+        position: absolute;
+        margin-top: -10px;
+;       margin-left: 290px;
+    }
+
+    .item{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        text-align: center;
+    }
+
+    tr:first-of-type {
+        font-weight: 800;
+        font-size: 33px;
+        text-align: left; 
+    }
+
+    td:first-of-type + td{
+        text-align: left;
+    }
+
+    h2{
+        text-align: center;
+        padding-top: 280px;
+        font-size: 58px;
+        text-shadow: #000 3px 3px 2px;
+    }
+
+    
+
+
+  </style>  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+</head>
+<body>
+
+  <h2>ASSAULT CUP 2024 ПОЛОЖЕНИЕ КОМАНД</h2>
+  <script>
+      function arrayToTable(tableData) {
+          var table = $('<table class=standings></table>');
+          $(tableData).each(function (i, rowData) {
+              var row = $('<tr></tr>');
+              $(rowData).each(function (j, cellData) {
+                  row.append($('<td class=item>'+cellData+'</td>'));
+              });
+              table.append(row);
+          });
+          return table;
+      }
+  
+      $.ajax({
+          type: "GET",
+          url: "https://aryss.github.io/ascup/data_ru.csv",
+          success: function (data) {
+              $('body').append(arrayToTable(Papa.parse(data).data));
+          }
+      });
+  </script>  
+
+
+
+</body>
+</html>
