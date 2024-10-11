@@ -1,0 +1,27 @@
+{
+    "teams": [
+      { "name": "Team Alpha", "id": 0, "roster_score": 1500, "wins": 10, "losses": 5, "otl": 2, "rounds_won": 50, "rounds_lost": 30 },
+      { "name": "Team Bravo", "id": 1, "roster_score": 1450, "wins": 8, "losses": 7, "otl": 3, "rounds_won": 48, "rounds_lost": 36 },
+      { "name": "Team Charlie", "id": 2, "roster_score": 1420, "wins": 9, "losses": 6, "otl": 1, "rounds_won": 47, "rounds_lost": 39 },
+      { "name": "Team Delta", "id": 3, "roster_score": 1420, "wins": 9, "losses": 6, "otl": 1, "rounds_won": 47, "rounds_lost": 39 },
+      { "name": "Winners in Life", "id": 4, "roster_score": 1420, "wins": 9, "losses": 6, "otl": 1, "rounds_won": 47, "rounds_lost": 39 },
+      { "name": "The Pretenders", "id": 5, "roster_score": 1420, "wins": 9, "losses": 6, "otl": 1, "rounds_won": 47, "rounds_lost": 39 },
+      { "name": "Pepseeper.Style", "id": 6, "roster_score": 1420, "wins": 9, "losses": 6, "otl": 1, "rounds_won": 47, "rounds_lost": 39 }
+    ],
+    "maps": [
+      { "id": "m1", "name": "AS-Fallencity-Ab1", "screenshot": "img/scr/fallen_city.jpg" },
+      { "id": "m2", "name": "AS-Robotfactory", "screenshot": "img/scr/robot_factory.jpg" },
+      { "id": "m3", "name": "AS-RRR-Glacier ", "screenshot": "img/scr/glacier.jpg" },
+      { "id": "m4", "name": "AS-Convoy-A1b", "screenshot": "img/scr/convoy.jpg" },
+      { "id": "m5", "name": "AS-RRR-Junkyard", "screenshot": "img/scr/junkyard.jpg" },
+      { "id": "m6", "name": "AS-Mothership", "screenshot": "img/scr/mothership.jpg" },
+      { "id": "m7", "name": "AS-Subrosa-Nightmare", "screenshot": "img/scr/subrosa.jpg" },
+      { "id": "m8", "name": "AS-Industrial-v1c", "screenshot": "img/scr/industrial.jpg" },
+      { "id": "m9", "name": "AS-BP2-Subrosa-LE[F3]", "screenshot": "img/scr/subrosa.jpg" },
+      { "id": "m10", "name": "AS-Insurrection-LE-V3", "screenshot": "img/scr/insurrection.jpg" },
+      { "id": "m11", "name": "AS-UCMP-Islandstrike", "screenshot": "img/scr/island_strike.jpg" },
+      { "id": "m12", "name": "AS-Overgrown-v3c-night", "screenshot": "img/scr/overgrown.jpg" },
+      { "id": "m13", "name": "AS-Xenon", "screenshot": "img/scr/xenon.jpg" }
+    ]
+  }
+  
