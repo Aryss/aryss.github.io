@@ -1,0 +1,192 @@
+{
+    "teams": [
+        {
+            "name": "Team Noanne",
+            "id": 0,
+            "roster_score": 105,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team X",
+            "id": 1,
+            "roster_score": 110,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team n1cer",
+            "id": 2,
+            "roster_score": 102,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team chong",
+            "id": 3,
+            "roster_score": 125,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team Nightmare",
+            "id": 4,
+            "roster_score": 114,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team Dan",
+            "id": 5,
+            "roster_score": 128,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team yk",
+            "id": 6,
+            "roster_score": 117,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team Keeper",
+            "id": 7,
+            "roster_score": 107,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Team Cold",
+            "id": 8,
+            "roster_score": 117,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Yaso Sobibu",
+            "id": 9,
+            "roster_score": 63,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        },
+        {
+            "name": "Leglock Enjoyers",
+            "id": 10,
+            "roster_score": 99,
+            "wins": 0,
+            "losses": 0,
+            "otw": 0,
+            "otl": 0,
+            "rounds_won": 0,
+            "rounds_lost": 0
+        }
+    ],
+    "maps": [
+        {
+            "id": "m1",
+            "name": "AS-Fallencity-Ab1",
+            "screenshot": "static/img/scr/fallen_city.jpg"
+        },
+        {
+            "id": "m2",
+            "name": "AS-Robotfactory",
+            "screenshot": "static/img/scr/robot_factory.jpg"
+        },
+        {
+            "id": "m3",
+            "name": "AS-RRR-Glacier ",
+            "screenshot": "static/img/scr/glacier.jpg"
+        },
+        {
+            "id": "m4",
+            "name": "AS-Convoy-A1b",
+            "screenshot": "static/img/scr/convoy.jpg"
+        },
+        {
+            "id": "m5",
+            "name": "AS-RRR-Junkyard",
+            "screenshot": "static/img/scr/junkyard.jpg"
+        },
+        {
+            "id": "m6",
+            "name": "AS-Mothership",
+            "screenshot": "static/img/scr/mothership.jpg"
+        },
+        {
+            "id": "m7",
+            "name": "AS-Subrosa-Nightmare",
+            "screenshot": "static/img/scr/subrosa-night.jpg"
+        },
+        {
+            "id": "m8",
+            "name": "AS-Industrial-v1c",
+            "screenshot": "static/img/scr/industrial.jpg"
+        },
+        {
+            "id": "m9",
+            "name": "AS-BP2-Subrosa-LE[F3]",
+            "screenshot": "static/img/scr/subrosa.jpg"
+        },
+        {
+            "id": "m10",
+            "name": "AS-Insurrection-LE-V3",
+            "screenshot": "static/img/scr/insurrection.jpg"
+        },
+        {
+            "id": "m11",
+            "name": "AS-UCMP-Islandstrike",
+            "screenshot": "static/img/scr/island_strike.jpg"
+        },
+        {
+            "id": "m12",
+            "name": "AS-Overgrown-v3c-night",
+            "screenshot": "static/img/scr/overgrown.jpg"
+        },
+        {
+            "id": "m13",
+            "name": "AS-Xenon",
+            "screenshot": "static/img/scr/xenon.jpg"
+        }
+    ]
+}
