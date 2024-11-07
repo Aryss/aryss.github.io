@@ -8,8 +8,14 @@
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "rounds_won": 0,
-            "rounds_lost": 0
+            "attacked": 0,
+            "defended": 0,
+            "points": 0,
+            "gp": 0,
+            "points_pct": 0.0,
+            "maps_won": 0,
+            "maps_lost": 0,
+            "pos": 1
         },
         {
             "name": "Team Naut",
@@ -19,8 +25,14 @@
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "rounds_won": 0,
-            "rounds_lost": 0
+            "attacked": 0,
+            "defended": 0,
+            "points": 0,
+            "gp": 0,
+            "points_pct": 0.0,
+            "maps_won": 0,
+            "maps_lost": 0,
+            "pos": 2
         },
         {
             "name": "Team Vernon",
@@ -30,8 +42,14 @@
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "rounds_won": 0,
-            "rounds_lost": 0
+            "attacked": 0,
+            "defended": 0,
+            "points": 0,
+            "gp": 0,
+            "points_pct": 0.0,
+            "maps_won": 0,
+            "maps_lost": 0,
+            "pos": 3
         },
         {
             "name": "Team Small",
@@ -41,8 +59,14 @@
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "rounds_won": 0,
-            "rounds_lost": 0
+            "attacked": 0,
+            "defended": 0,
+            "points": 0,
+            "gp": 0,
+            "points_pct": 0.0,
+            "maps_won": 0,
+            "maps_lost": 0,
+            "pos": 4
         },
         {
             "name": "Team Bugatti",
@@ -52,8 +76,14 @@
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "rounds_won": 0,
-            "rounds_lost": 0
+            "attacked": 0,
+            "defended": 0,
+            "points": 0,
+            "gp": 0,
+            "points_pct": 0.0,
+            "maps_won": 0,
+            "maps_lost": 0,
+            "pos": 5
         }
     ],
     "maps": [
@@ -79,7 +109,7 @@
         },
         {
             "id": "m5",
-            "name": "AS-RRR-Insurrection-LE-V3",
+            "name": "AS-Insurrection-LE-V3",
             "screenshot": "static/img/scr/insurrection.jpg"
         },
         {
