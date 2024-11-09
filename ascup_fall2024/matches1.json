@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "date": "09.11.2024",
+        "team1": "Team Mind",
+        "team1score": "0",
+        "team2": "Team Bugatti",
+        "team2score": "3",
+        "t1ra": "1",
+        "t2ra": "2",
+        "t1rd": "1",
+        "t2rd": "3",
+        "map1": "AS-Overgrown-v3c-Night",
+        "map1result": "OBJ2",
+        "map2": "AS-Insurrection-LE-V3",
+        "map2result": "OBJ2",
+        "map3": "AS-RRR-Glacier",
+        "map3result": "OBJ2",
+        "map4": "",
+        "map4result": "",
+        "map5": "",
+        "map5result": "",
+        "map6": "",
+        "map6result": "",
+        "map7": "",
+        "map7result": ""
+    }
+]
