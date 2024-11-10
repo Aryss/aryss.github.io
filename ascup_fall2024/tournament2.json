@@ -15,7 +15,7 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 2,
-            "pos": 7
+            "pos": 10
         },
         {
             "name": "Team X",
@@ -23,16 +23,16 @@
             "roster_score": 110,
             "wins": 1,
             "losses": 0,
-            "otw": 0,
+            "otw": 1,
             "otl": 0,
-            "attacked": 2,
-            "defended": 1,
-            "points": 3,
-            "gp": 1,
-            "points_pct": 1.0,
-            "maps_won": 2,
-            "maps_lost": 0,
-            "pos": 3
+            "attacked": 5,
+            "defended": 2,
+            "points": 5,
+            "gp": 2,
+            "points_pct": 0.83,
+            "maps_won": 4,
+            "maps_lost": 1,
+            "pos": 2
         },
         {
             "name": "Team N1cer",
@@ -41,15 +41,15 @@
             "wins": 0,
             "losses": 0,
             "otw": 0,
-            "otl": 0,
+            "otl": 1,
             "attacked": 0,
             "defended": 0,
-            "points": 0,
-            "gp": 0,
-            "points_pct": 0.0,
-            "maps_won": 0,
-            "maps_lost": 0,
-            "pos": 10
+            "points": 1,
+            "gp": 1,
+            "points_pct": 0.33,
+            "maps_won": 1,
+            "maps_lost": 2,
+            "pos": 6
         },
         {
             "name": "Team Chong",
@@ -100,7 +100,7 @@
             "points_pct": 0.33,
             "maps_won": 1,
             "maps_lost": 2,
-            "pos": 5
+            "pos": 7
         },
         {
             "name": "Team Yk",
@@ -117,7 +117,7 @@
             "points_pct": 0.83,
             "maps_won": 4,
             "maps_lost": 1,
-            "pos": 2
+            "pos": 3
         },
         {
             "name": "Team Keeper",
@@ -134,24 +134,24 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 2,
-            "pos": 8
+            "pos": 11
         },
         {
             "name": "Team Cold",
             "id": 8,
             "roster_score": 117,
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "attacked": 0,
-            "defended": 0,
-            "points": 0,
-            "gp": 0,
-            "points_pct": 0.0,
-            "maps_won": 0,
+            "attacked": 2,
+            "defended": 1,
+            "points": 3,
+            "gp": 1,
+            "points_pct": 1.0,
+            "maps_won": 2,
             "maps_lost": 0,
-            "pos": 11
+            "pos": 5
         },
         {
             "name": "Yaso Subibu",
@@ -168,23 +168,23 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 4,
-            "pos": 6
+            "pos": 8
         },
         {
             "name": "Leglock Enjoyers",
             "id": 10,
             "roster_score": 99,
             "wins": 0,
-            "losses": 1,
+            "losses": 2,
             "otw": 0,
             "otl": 0,
-            "attacked": 1,
+            "attacked": 2,
             "defended": 0,
             "points": 0,
-            "gp": 1,
+            "gp": 2,
             "points_pct": 0.0,
             "maps_won": 0,
-            "maps_lost": 2,
+            "maps_lost": 4,
             "pos": 9
         }
     ],
