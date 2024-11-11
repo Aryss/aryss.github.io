@@ -23,5 +23,30 @@
         "map6result": "",
         "map7": "",
         "map7result": ""
+    },
+    {
+        "date": "11.11.2024",
+        "team1": "Team Vernon",
+        "team1score": "3",
+        "team2": "Team Small",
+        "team2score": "0",
+        "t1ra": "2",
+        "t2ra": "0",
+        "t1rd": "3",
+        "t2rd": "1",
+        "map1": "AS-Cimerion-LE-v5",
+        "map1result": "OBJ1",
+        "map2": "AS-RobotFactory",
+        "map2result": "OBJ1",
+        "map3": "AS-Overgrown-v3c-Night",
+        "map3result": "OBJ1",
+        "map4": "",
+        "map4result": "",
+        "map5": "",
+        "map5result": "",
+        "map6": "",
+        "map6result": "",
+        "map7": "",
+        "map7result": ""
     }
 ]

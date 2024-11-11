@@ -15,7 +15,7 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 3,
-            "pos": 2
+            "pos": 3
         },
         {
             "name": "Team Naut",
@@ -32,7 +32,7 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 0,
-            "pos": 3
+            "pos": 5
         },
         {
             "name": "Team Vernon",
@@ -46,10 +46,10 @@
             "defended": 0,
             "points": 0,
             "gp": 0,
-            "points_pct": 0.0,
-            "maps_won": 0,
+            "points_pct": 1.0,
+            "maps_won": 3,
             "maps_lost": 0,
-            "pos": 4
+            "pos": 1
         },
         {
             "name": "Team Small",
@@ -65,8 +65,8 @@
             "gp": 0,
             "points_pct": 0.0,
             "maps_won": 0,
-            "maps_lost": 0,
-            "pos": 5
+            "maps_lost": 3,
+            "pos": 4
         },
         {
             "name": "Team Bugatti",
@@ -83,7 +83,7 @@
             "points_pct": 1.0,
             "maps_won": 3,
             "maps_lost": 0,
-            "pos": 1
+            "pos": 2
         }
     ],
     "maps": [
