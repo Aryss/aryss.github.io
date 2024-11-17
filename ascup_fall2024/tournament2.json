@@ -15,24 +15,24 @@
             "points_pct": 0.5,
             "maps_won": 2,
             "maps_lost": 2,
-            "pos": 6
+            "pos": 8
         },
         {
             "name": "Team X",
             "id": 1,
             "roster_score": 110,
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "otw": 2,
             "otl": 0,
-            "attacked": 7,
-            "defended": 3,
-            "points": 7,
-            "gp": 4,
-            "points_pct": 0.58,
-            "maps_won": 6,
+            "attacked": 9,
+            "defended": 4,
+            "points": 13,
+            "gp": 5,
+            "points_pct": 0.87,
+            "maps_won": 8,
             "maps_lost": 2,
-            "pos": 2
+            "pos": 1
         },
         {
             "name": "Team N1cer",
@@ -44,12 +44,12 @@
             "otl": 1,
             "attacked": 0,
             "defended": 0,
-            "points": 4,
+            "points": 7,
             "gp": 3,
-            "points_pct": 0.44,
+            "points_pct": 0.78,
             "maps_won": 3,
             "maps_lost": 2,
-            "pos": 4
+            "pos": 3
         },
         {
             "name": "Team Chong",
@@ -66,22 +66,22 @@
             "points_pct": 1.0,
             "maps_won": 4,
             "maps_lost": 0,
-            "pos": 3
+            "pos": 4
         },
         {
             "name": "Team Nightmare",
             "id": 4,
             "roster_score": 114,
-            "wins": 1,
+            "wins": 2,
             "losses": 0,
             "otw": 0,
             "otl": 0,
-            "attacked": 2,
-            "defended": 2,
-            "points": 3,
-            "gp": 1,
+            "attacked": 4,
+            "defended": 3,
+            "points": 6,
+            "gp": 2,
             "points_pct": 1.0,
-            "maps_won": 2,
+            "maps_won": 4,
             "maps_lost": 0,
             "pos": 5
         },
@@ -95,12 +95,12 @@
             "otl": 1,
             "attacked": 2,
             "defended": 0,
-            "points": 1,
+            "points": 4,
             "gp": 2,
-            "points_pct": 0.17,
+            "points_pct": 0.67,
             "maps_won": 1,
             "maps_lost": 2,
-            "pos": 8
+            "pos": 7
         },
         {
             "name": "Team Yk",
@@ -112,12 +112,12 @@
             "otl": 1,
             "attacked": 8,
             "defended": 5,
-            "points": 9,
+            "points": 12,
             "gp": 5,
-            "points_pct": 0.6,
+            "points_pct": 0.8,
             "maps_won": 7,
             "maps_lost": 3,
-            "pos": 1
+            "pos": 2
         },
         {
             "name": "Team Keeper",
@@ -129,12 +129,12 @@
             "otl": 0,
             "attacked": 1,
             "defended": 0,
-            "points": 0,
+            "points": 3,
             "gp": 2,
-            "points_pct": 0.0,
+            "points_pct": 0.5,
             "maps_won": 0,
             "maps_lost": 2,
-            "pos": 10
+            "pos": 9
         },
         {
             "name": "Team Cold",
@@ -146,12 +146,12 @@
             "otl": 0,
             "attacked": 3,
             "defended": 3,
-            "points": 3,
+            "points": 6,
             "gp": 4,
-            "points_pct": 0.25,
+            "points_pct": 0.5,
             "maps_won": 2,
             "maps_lost": 4,
-            "pos": 7
+            "pos": 6
         },
         {
             "name": "Yaso Subibu",
@@ -168,23 +168,23 @@
             "points_pct": 0.0,
             "maps_won": 0,
             "maps_lost": 6,
-            "pos": 9
+            "pos": 10
         },
         {
             "name": "Leglock Enjoyers",
             "id": 10,
             "roster_score": 99,
             "wins": 0,
-            "losses": 2,
+            "losses": 4,
             "otw": 0,
             "otl": 0,
-            "attacked": 2,
+            "attacked": 4,
             "defended": 0,
             "points": 0,
-            "gp": 2,
+            "gp": 4,
             "points_pct": 0.0,
             "maps_won": 0,
-            "maps_lost": 4,
+            "maps_lost": 8,
             "pos": 11
         }
     ],
