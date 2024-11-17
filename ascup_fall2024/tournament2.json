@@ -4,18 +4,18 @@
             "name": "Team Noanne",
             "id": 0,
             "roster_score": 105,
-            "wins": 1,
+            "wins": 2,
             "losses": 1,
             "otw": 0,
             "otl": 0,
-            "attacked": 2,
-            "defended": 0,
-            "points": 3,
-            "gp": 2,
-            "points_pct": 0.5,
-            "maps_won": 2,
+            "attacked": 4,
+            "defended": 1,
+            "points": 6,
+            "gp": 3,
+            "points_pct": 0.67,
+            "maps_won": 4,
             "maps_lost": 2,
-            "pos": 8
+            "pos": 6
         },
         {
             "name": "Team X",
@@ -39,17 +39,17 @@
             "id": 2,
             "roster_score": 102,
             "wins": 1,
-            "losses": 0,
+            "losses": 1,
             "otw": 0,
             "otl": 1,
             "attacked": 0,
             "defended": 0,
             "points": 7,
-            "gp": 3,
-            "points_pct": 0.78,
+            "gp": 4,
+            "points_pct": 0.58,
             "maps_won": 3,
-            "maps_lost": 2,
-            "pos": 3
+            "maps_lost": 4,
+            "pos": 4
         },
         {
             "name": "Team Chong",
@@ -66,41 +66,41 @@
             "points_pct": 1.0,
             "maps_won": 4,
             "maps_lost": 0,
-            "pos": 4
+            "pos": 5
         },
         {
             "name": "Team Nightmare",
             "id": 4,
             "roster_score": 114,
             "wins": 2,
-            "losses": 0,
+            "losses": 1,
             "otw": 0,
             "otl": 0,
-            "attacked": 4,
+            "attacked": 5,
             "defended": 3,
             "points": 6,
-            "gp": 2,
-            "points_pct": 1.0,
+            "gp": 3,
+            "points_pct": 0.67,
             "maps_won": 4,
-            "maps_lost": 0,
-            "pos": 5
+            "maps_lost": 2,
+            "pos": 7
         },
         {
             "name": "Team Dan",
             "id": 5,
             "roster_score": 128,
-            "wins": 0,
+            "wins": 2,
             "losses": 0,
             "otw": 0,
             "otl": 1,
-            "attacked": 2,
-            "defended": 0,
-            "points": 4,
-            "gp": 2,
-            "points_pct": 0.67,
-            "maps_won": 1,
+            "attacked": 6,
+            "defended": 4,
+            "points": 10,
+            "gp": 4,
+            "points_pct": 0.83,
+            "maps_won": 5,
             "maps_lost": 2,
-            "pos": 7
+            "pos": 3
         },
         {
             "name": "Team Yk",
@@ -123,35 +123,35 @@
             "name": "Team Keeper",
             "id": 7,
             "roster_score": 107,
-            "wins": 0,
-            "losses": 1,
-            "otw": 0,
-            "otl": 0,
-            "attacked": 1,
-            "defended": 0,
-            "points": 3,
-            "gp": 2,
-            "points_pct": 0.5,
-            "maps_won": 0,
-            "maps_lost": 2,
-            "pos": 9
-        },
-        {
-            "name": "Team Cold",
-            "id": 8,
-            "roster_score": 117,
             "wins": 1,
             "losses": 2,
             "otw": 0,
             "otl": 0,
-            "attacked": 3,
-            "defended": 3,
+            "attacked": 4,
+            "defended": 1,
             "points": 6,
             "gp": 4,
             "points_pct": 0.5,
             "maps_won": 2,
             "maps_lost": 4,
-            "pos": 6
+            "pos": 8
+        },
+        {
+            "name": "Pump!",
+            "id": 8,
+            "roster_score": 117,
+            "wins": 1,
+            "losses": 3,
+            "otw": 0,
+            "otl": 0,
+            "attacked": 3,
+            "defended": 3,
+            "points": 6,
+            "gp": 5,
+            "points_pct": 0.4,
+            "maps_won": 2,
+            "maps_lost": 6,
+            "pos": 9
         },
         {
             "name": "Yaso Subibu",
@@ -191,12 +191,12 @@
     "maps": [
         {
             "id": "m1",
-            "name": "AS-Fallencity-A1b",
+            "name": "AS-FallenCity-A1b",
             "screenshot": "static/img/scr/fallen_city.jpg"
         },
         {
             "id": "m2",
-            "name": "AS-Robotfactory",
+            "name": "AS-RobotFactory",
             "screenshot": "static/img/scr/robot_factory.jpg"
         },
         {
@@ -231,7 +231,7 @@
         },
         {
             "id": "m9",
-            "name": "AS-BP2-Subrosa-LE[F3]",
+            "name": "AS-BP2-SubRosa-LE[F3]",
             "screenshot": "static/img/scr/subrosa.jpg"
         },
         {
@@ -241,12 +241,12 @@
         },
         {
             "id": "m11",
-            "name": "AS-UCMP3-Islandstrike",
+            "name": "AS-UCMP3-IslandStrike",
             "screenshot": "static/img/scr/island_strike.jpg"
         },
         {
             "id": "m12",
-            "name": "AS-Overgrown-v3c-night",
+            "name": "AS-Overgrown-v3c-Night",
             "screenshot": "static/img/scr/overgrown.jpg"
         },
         {
