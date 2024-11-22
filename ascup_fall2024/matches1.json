@@ -98,5 +98,30 @@
         "map6result": "",
         "map7": "",
         "map7result": ""
+    },
+    {
+        "date": "22.11.2024",
+        "team1": "Team Naut",
+        "team1score": "1",
+        "team2": "Team Bugatti",
+        "team2score": "3",
+        "t1ra": "1",
+        "t2ra": "1",
+        "t1rd": "1",
+        "t2rd": "1",
+        "map1": "AS-Cimerion-LE-v5",
+        "map1result": "OBJ2",
+        "map2": "AS-Convoy-A1b",
+        "map2result": "OBJ1",
+        "map3": "AS-Insurrection-LE-V3",
+        "map3result": "OBJ2",
+        "map4": "AS-Overgrown-v3c-Night",
+        "map4result": "OBJ2",
+        "map5": "",
+        "map5result": "",
+        "map6": "",
+        "map6result": "",
+        "map7": "",
+        "map7result": ""
     }
 ]
