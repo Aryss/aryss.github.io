@@ -6,16 +6,16 @@
             "roster_score": 105,
             "wins": 2,
             "losses": 1,
-            "otw": 0,
+            "otw": 1,
             "otl": 0,
-            "attacked": 4,
-            "defended": 1,
-            "points": 6,
-            "gp": 3,
+            "attacked": 6,
+            "defended": 2,
+            "points": 8,
+            "gp": 4,
             "points_pct": 0.67,
-            "maps_won": 4,
-            "maps_lost": 2,
-            "pos": 6
+            "maps_won": 6,
+            "maps_lost": 3,
+            "pos": 4
         },
         {
             "name": "Team X",
@@ -35,7 +35,7 @@
             "pos": 1
         },
         {
-            "name": "Team N1cer",
+            "name": "Team 2k",
             "id": 2,
             "roster_score": 102,
             "wins": 2,
@@ -49,7 +49,7 @@
             "points_pct": 0.58,
             "maps_won": 3,
             "maps_lost": 4,
-            "pos": 4
+            "pos": 5
         },
         {
             "name": "Team Chong",
@@ -66,7 +66,7 @@
             "points_pct": 1.0,
             "maps_won": 4,
             "maps_lost": 0,
-            "pos": 5
+            "pos": 7
         },
         {
             "name": "Team Nightmare",
@@ -83,7 +83,7 @@
             "points_pct": 0.67,
             "maps_won": 4,
             "maps_lost": 2,
-            "pos": 7
+            "pos": 8
         },
         {
             "name": "Team Dan",
@@ -134,7 +134,7 @@
             "points_pct": 0.5,
             "maps_won": 2,
             "maps_lost": 4,
-            "pos": 8
+            "pos": 9
         },
         {
             "name": "Pump!",
@@ -143,15 +143,15 @@
             "wins": 2,
             "losses": 3,
             "otw": 0,
-            "otl": 0,
-            "attacked": 3,
-            "defended": 3,
-            "points": 6,
-            "gp": 5,
-            "points_pct": 0.4,
-            "maps_won": 2,
-            "maps_lost": 6,
-            "pos": 9
+            "otl": 1,
+            "attacked": 5,
+            "defended": 4,
+            "points": 7,
+            "gp": 6,
+            "points_pct": 0.39,
+            "maps_won": 3,
+            "maps_lost": 8,
+            "pos": 6
         },
         {
             "name": "Yaso Subibu",
