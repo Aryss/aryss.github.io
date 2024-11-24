@@ -15,7 +15,7 @@
             "points_pct": 0.67,
             "maps_won": 8,
             "maps_lost": 4,
-            "pos": 4
+            "pos": 5
         },
         {
             "name": "Team X",
@@ -49,24 +49,24 @@
             "points_pct": 0.47,
             "maps_won": 3,
             "maps_lost": 6,
-            "pos": 6
+            "pos": 8
         },
         {
             "name": "Team Chong",
             "id": 3,
             "roster_score": 125,
-            "wins": 3,
+            "wins": 4,
             "losses": 0,
             "otw": 0,
-            "otl": 0,
-            "attacked": 5,
-            "defended": 4,
-            "points": 9,
-            "gp": 3,
-            "points_pct": 1.0,
-            "maps_won": 6,
-            "maps_lost": 0,
-            "pos": 5
+            "otl": 1,
+            "attacked": 8,
+            "defended": 6,
+            "points": 13,
+            "gp": 5,
+            "points_pct": 0.87,
+            "maps_won": 9,
+            "maps_lost": 2,
+            "pos": 2
         },
         {
             "name": "Team Nightmare",
@@ -78,12 +78,12 @@
             "otl": 0,
             "attacked": 5,
             "defended": 3,
-            "points": 6,
+            "points": 5,
             "gp": 3,
-            "points_pct": 0.67,
+            "points_pct": 0.56,
             "maps_won": 4,
             "maps_lost": 2,
-            "pos": 8
+            "pos": 9
         },
         {
             "name": "Team Dan",
@@ -100,7 +100,7 @@
             "points_pct": 0.73,
             "maps_won": 6,
             "maps_lost": 4,
-            "pos": 3
+            "pos": 4
         },
         {
             "name": "Team Yk",
@@ -117,7 +117,7 @@
             "points_pct": 0.8,
             "maps_won": 7,
             "maps_lost": 3,
-            "pos": 2
+            "pos": 3
         },
         {
             "name": "Team Keeper",
@@ -125,16 +125,16 @@
             "roster_score": 107,
             "wins": 2,
             "losses": 2,
-            "otw": 0,
-            "otl": 0,
-            "attacked": 4,
-            "defended": 1,
-            "points": 6,
-            "gp": 4,
+            "otw": 1,
+            "otl": 1,
+            "attacked": 8,
+            "defended": 2,
+            "points": 9,
+            "gp": 6,
             "points_pct": 0.5,
-            "maps_won": 2,
-            "maps_lost": 4,
-            "pos": 9
+            "maps_won": 5,
+            "maps_lost": 7,
+            "pos": 6
         },
         {
             "name": "Pump!",
@@ -142,15 +142,15 @@
             "roster_score": 117,
             "wins": 2,
             "losses": 3,
-            "otw": 0,
+            "otw": 1,
             "otl": 1,
-            "attacked": 5,
-            "defended": 4,
-            "points": 7,
-            "gp": 6,
-            "points_pct": 0.39,
-            "maps_won": 3,
-            "maps_lost": 8,
+            "attacked": 8,
+            "defended": 5,
+            "points": 9,
+            "gp": 7,
+            "points_pct": 0.43,
+            "maps_won": 5,
+            "maps_lost": 9,
             "pos": 7
         },
         {
@@ -175,16 +175,16 @@
             "id": 10,
             "roster_score": 99,
             "wins": 0,
-            "losses": 4,
+            "losses": 5,
             "otw": 0,
             "otl": 0,
-            "attacked": 4,
+            "attacked": 5,
             "defended": 0,
             "points": 0,
-            "gp": 4,
+            "gp": 5,
             "points_pct": 0.0,
             "maps_won": 0,
-            "maps_lost": 8,
+            "maps_lost": 10,
             "pos": 11
         }
     ],
