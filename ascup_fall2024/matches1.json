@@ -223,5 +223,30 @@
         "map6result": "",
         "map7": "",
         "map7result": ""
+    },
+    {
+        "date": "07.12.2024",
+        "team1": "Team Mind",
+        "team1score": "1",
+        "team2": "Team Vernon",
+        "team2score": "3",
+        "t1ra": "2",
+        "t2ra": "3",
+        "t1rd": "1",
+        "t2rd": "2",
+        "map1": "AS-RRR-Glacier",
+        "map1result": "OBJ1",
+        "map2": "AS-FallenCity-A1b",
+        "map2result": "OBJ2",
+        "map3": "AS-RobotFactory",
+        "map3result": "TIME2",
+        "map4": "AS-BP2-SubRosa-LE[F3]",
+        "map4result": "OBJ2",
+        "map5": "",
+        "map5result": "",
+        "map6": "",
+        "map6result": "",
+        "map7": "",
+        "map7result": ""
     }
 ]
