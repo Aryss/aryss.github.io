@@ -1267,5 +1267,32 @@
         "map7result": "",
         "": "",
         "CheckSum": ""
+    },
+    {
+        "date": "15.12.2024",
+        "team1": "Leglock Enjoyers",
+        "team1score": "0",
+        "team2": "Team Noanne",
+        "team2score": "2",
+        "t1ra": "0",
+        "t2ra": "2",
+        "t1rd": "0",
+        "t2rd": "2",
+        "map1": "AS-Overgrown-v3c-Night",
+        "map1result": "OBJ2",
+        "map2": "AS-RRR-Junkyard",
+        "map2result": "OBJ2",
+        "map3": "",
+        "map3result": "",
+        "map4": "",
+        "map4result": "",
+        "map5": "",
+        "map5result": "",
+        "map6": "",
+        "map6result": "",
+        "map7": "",
+        "map7result": "",
+        "": "",
+        "CheckSum": ""
     }
 ]
